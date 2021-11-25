@@ -1,17 +1,20 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
+    "fname": "Sally",
+    "lname": "Fields",
+    "email": "salf@hotmail.com",
     "password": "password12345"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
+    "fname": "Leonard",
+    "lname": "Tino",
+    "email": "ltino@gmail.com",
     "password": "password12345"
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
+    "fname": "Amiko",
+    "lname": "Tanaka",
+    "email": "amikot@yahoo.com",
     "password": "password12345"
   }
 ]

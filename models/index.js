@@ -1,4 +1,5 @@
 const User = require('./User');
+
 const Review = require('./Reviews');
 
 User.hasMany(Review, {
