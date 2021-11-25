@@ -1,16 +1,20 @@
 <!-- Loop over each object in the products array -->
-{{#each products as |product| }}
-<div class="row mb-4 product">
-  <div class="col-md-5">
-    <h2>
-      <a href="/product/{{product.id}}">{{product.brand}}</a>
-    </h2>
-    <p>Created by {{product.user.fname}} on {{format_date product.date_created}}</p>
+{{#each reviews as |product|}}
+  <div class='row mb-4 product'>
+    <div class='col-md-5'>
+      <h2>
+        <a href='/product/{{product.id}}'>{{product.brand}}</a>
+      </h2>
+      <p>{{product.type}}</p>
+      <p>Created by
+        {{product.user.fname}}
+        on
+        {{format_date product.date_created}}</p>
+    </div>
+    <div class='col-md-7'>
+      <p>
+        {{product.description}}
+      </p>
+    </div>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{product.description}}
-    </p>
-  </div>
-</div>
 {{/each}}
