@@ -11,7 +11,11 @@ Review.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    brand: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -23,9 +27,13 @@ Review.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    price: {
       type: DataTypes.FLOAT,
-      allowNull: false,
+    },
+    link: {
+      type: DataTypes.STRING,
+      validate: {isUrl: true}
+
     },
     user_id: {
       type: DataTypes.INTEGER,
