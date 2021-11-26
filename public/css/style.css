@@ -1,24 +1,173 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-}
-
-.no-button {
-  background: none;
-  border: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+  background-color: rgb(255, 254, 251);
+}
+
+#header-section {
+  background-image: url(../assets/Landing-page.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-image {
+  height: 800px;
+}
+
+#header-section img {
+  width: 100%;
+  height: auto;
+}
+
+.header-h1 {
+  color: white;
+  font-size: 40px;
+}
+
+a {
   text-decoration: none;
-  font-size: 100%;
+  color: black;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+.nav-links {
+  list-style: none; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Didot', serif;
+  align-items: center;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.nav-links li {
+  padding: 20px;
+}
+
+
+.nav-links li a:hover {
+color:white;
+}
+
+.homepage-reviews-h1 {
+  text-align: center;
+  margin: 120px 0px 0px 0px;
+}
+
+#homepage-reviews {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 180px;
+  text-align: -webkit-center;
+}
+
+.homepage-reviews-content {
+  padding: 50px;
+}
+
+.homepage-review-text {
+  margin: 10px 5px 30px;
+    text-align: initial;
+    background: lavender;
+    padding: 16px;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+
+.reviews-button {
+  padding: 9px 18px;
+  background-color: #bdcbf3;
+  border-radius: 30px;
+  border: none;
+  text-decoration: none;
+  width: 110px;
+  color: black;
+}
+
+button {
+    border: none;
+    all: unset;
+}
+
+.reviews-h1 {
+  text-align: center;
+  margin: 100px;
+}
+
+#see-all-reviews {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.see-all-reviews-text {
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 80px 40px 0px 0px;
+  z-index: 1;
+  line-height: 1;
+  width: 600px;
+  line-height: 25px;
+}
+
+.reviews-text {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+.see-all-reviews-feature-img {
+    margin-left: -0px;
+    width: 500px;
+}
+
+.reviews-feature-img {
+  height: 450px;
+  background: url(../assets/mask+hair.jpeg) no-repeat center / cover; 
+  border-radius: 40px;
+  border: 0.03px solid rgb(94, 94, 94);
+  transform: rotate(-3deg); 
+  margin-left: 55px;  
+}
+
+.reviews-feature-img:hover {
+  border-radius: 500px / 300px;
+}
+
+footer {
+  width: auto;
+  margin-top: 200px;
+}
+
+.footer-box {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  justify-content: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0px 25px;
+  display: flex;
+  width: auto;
+  gap: 150px;
+  align-items: center;
+}
+
+.footer-links li a {
+  display: inline-block;
 }
