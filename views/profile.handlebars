@@ -1,56 +1,83 @@
-<div class="row">
-  <div class="col-auto">
+<div class='row'>
+  <div class='col-auto'>
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class='row mt-4'>
+  <div class='col-md-6'>
     <h3>Add a new product:</h3>
 
-    <form class="form new-product-form">
-      <div class="form-group">
-        <label for="product-brand">Brand:</label>
-        <input class="form-input" type="text" id="product-brand" name="product-brand" />
+    <form class='form new-product-form'>
+      <div class='form-group'>
+        <label for='product-brand'>Brand:</label>
+        <input
+          class='form-input'
+          type='text'
+          id='product-brand'
+          name='product-brand'
+        />
       </div>
-      <div class="form-group">
-        <label for="product-type">Type:</label>
-        <input class="form-input" type="text" id="product-type" name="product-type" />
+      <div class='form-group'>
+        <label for='product-type'>Type:</label>
+        <input
+          class='form-input'
+          type='text'
+          id='product-type'
+          name='product-type'
+        />
       </div>
-      <div class="form-group">
-        <label for="product-price">Price:</label>
-        <input class="form-input" type="number" id="product-price" name="product-price" />
+      <div class='form-group'>
+        <label for='product-price'>Price:</label>
+        <input
+          class='form-input'
+          type='number'
+          id='product-price'
+          name='product-price'
+        />
       </div>
-      <div class="form-group">
-        <label for="product-link">Link to product page:</label>
-        <input class="form-input" type="text" id="product-link" name="product-link" />
+      <div class='form-group'>
+        <label for='product-link'>Link to product page:</label>
+        <input
+          class='form-input'
+          type='text'
+          id='product-link'
+          name='product-link'
+        />
       </div>
-      <div class="form-group">
-        <label for="product-desc">Description:</label>
-        <textarea class="form-input" id="product-desc" name="product-desc"></textarea>
+      <div class='form-group'>
+        <label for='product-desc'>Description:</label>
+        <textarea
+          class='form-input'
+          id='product-desc'
+          name='product-desc'
+        ></textarea>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Publish</button>
+      <div class='form-group'>
+        <button type='submit' class='btn btn-primary'>Publish</button>
       </div>
     </form>
   </div>
 
-  {{#if products.length}}
-  <div class="col-md-6 product-list">
-    <h3>My Beauty Board:</h3>
+  {{#if reviews.length}}
+    <div class='col-md-6 product-list'>
+      <h3>My Beauty Board:</h3>
 
-    {{#each products as |product|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/product/{{product.id}}">{{product.brand}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{product.id}}">DELETE</button>
-      </div>
+      {{#each reviews as |product|}}
+        <div class='row mb-2'>
+          <div class='col-md-8'>
+            <h4><a href='/product/{{product.id}}'>{{product.brand}}</a></h4>
+          </div>
+          <div class='col-md-4'>
+            <button
+              class='btn btn-sm btn-danger'
+              data-id='{{product.id}}'
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
   {{/if}}
 </div>
 
-<script src="./js/profile.js"></script>
+<script src='./js/profile.js'></script>
