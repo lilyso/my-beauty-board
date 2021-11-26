@@ -9,10 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-<<<<<<< HEAD
-=======
-          attributes: ['fname', 'lname']
->>>>>>> main
+          attributes: ['fname', 'lname'],
         },
       ],
     });
@@ -23,11 +20,7 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', {
       reviews,
-<<<<<<< HEAD
       logged_in: req.session.logged_in,
-=======
-      logged_in: req.session.logged_in
->>>>>>> main
     });
   } catch (err) {
     res.status(500).json(err);
@@ -40,27 +33,16 @@ router.get('/review/:id', async (req, res) => {
       include: [
         {
           model: User,
-<<<<<<< HEAD
-=======
           attributes: ['fname', 'lname'],
->>>>>>> main
         },
       ],
     });
 
-<<<<<<< HEAD
-    const reviews = reviewData.get({ plain: true });
-
-    res.render('review', {
-      ...review,
-      logged_in: req.session.logged_in,
-=======
     const review = reviewData.get({ plain: true });
 
     res.render('review', {
       ...review,
-      logged_in: req.session.logged_in
->>>>>>> main
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
