@@ -2,30 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/w3schools.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+    <header id="header-section">
+        <div class="background-image">
+            <nav class="nav-bar">
+                <ul class="nav-links">
+                    <li><a href="index.html">
+                            <h1 class="header-h1">Beauty Board</h1>
+                        </a></li>
+                    <li><a href="#about-me" class="about">About</a></li>
+                    <li><a href="#reviews" class="reviews">Reviews</a></li>
+                    <li><a href="#beauty-board" class="beauty-board">Your Beauty Board</a></li>
+                            <!-- Conditionally render login or logout links -->
+                  {{#if logged_in}}
+                    <li><a href="#login" class="login">Login</a></li>
+                  {{else}}
+                    <li><a href="#logout">Logout</a></li>
+                  {{/if}}
+
+                </ul>
+            </nav>
+        </div>
     </header>
+    <h1 class="homepage-reviews-h1">Latest Reviews</h1>
+      
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
@@ -39,6 +47,36 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-</body>
 
+
+<h1 class="reviews-h1">See All Reviws</h1>
+    <div id="see-all-reviews">
+        <!-- Left side review content -->
+        <div class="see-all-reviews-text">
+            <a href="#reviews">
+                <p class="reviews-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel cupiditate dolore
+                    quo
+                    illum aliquam magni consequatur enim perferendis earum asperiores id quasi vitae ipsa dignissimos
+                    saepe,
+                    sapiente deleniti, reiciendis modi!</p>
+            </a>
+        </div>
+        <!-- Right side review content -->
+        <div class="see-all-reviews-feature-img">
+            <div class="reviews-feature-img"></div>
+        </div>
+    </div>
+
+<footer>
+    <div class="footer-box">
+        <ul class="footer-links">
+            <li><a href="mailto:mastroalexis@gmail.com" class="Contact">Contact</a></li>
+            <li><a href="#about" class="Github">About</a></li>
+            <li><a href="index.html">Beauty Board</a></li>
+            <li><a href="#" class="Linkedin">FAQ's</a></li>
+            <li><a href="#" class="Instagram">Social</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
 </html>
