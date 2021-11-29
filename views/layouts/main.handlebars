@@ -21,24 +21,19 @@
                     <li><a href="#about-me" class="about">About</a></li>
                     <li><a href="#reviews" class="reviews">Reviews</a></li>
                     <li><a href="#beauty-board" class="beauty-board">Your Beauty Board</a></li>
+                            <!-- Conditionally render login or logout links -->
+                  {{#if logged_in}}
                     <li><a href="#login" class="login">Login</a></li>
+                  {{else}}
+                    <li><a href="#logout">Logout</a></li>
+                  {{/if}}
+
                 </ul>
             </nav>
         </div>
     </header>
     <h1 class="homepage-reviews-h1">Latest Reviews</h1>
-    
-    {{!-- add nav --}}
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
+      
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
