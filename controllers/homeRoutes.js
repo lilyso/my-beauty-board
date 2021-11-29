@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Review, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/review', async (req, res) => {
   try {
     // Get all reviews and JOIN with user data
     const reviewData = await Review.findAll({
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     const reviews = reviewData.map((review) => review.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {
+    res.render('review', {
       reviews,
       logged_in: req.session.logged_in,
     });
@@ -27,27 +27,28 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/review/:id', async (req, res) => {
-  try {
-    const reviewData = await Review.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['fname', 'lname'],
-        },
-      ],
-    });
+// router.get('/review', async (req, res) => {
+//   try {
+//     const reviewData = await Review.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['fname', 'lname'],
+//         },
+//       ],
+//     });
 
-    const review = reviewData.get({ plain: true });
+//     const review = reviewData.get({ plain: true });
 
-    res.render('review', {
-      ...review,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('review', {
+//       ...review,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
