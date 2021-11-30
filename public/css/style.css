@@ -4,7 +4,9 @@
   padding: 0;
 }
 
-*, :before, :after {
+*,
+:before,
+:after {
   box-sizing: border-box;
 }
 
@@ -19,7 +21,6 @@ html {
   background-size: cover;
   background-position: center;
 }
-
 
 .background-image {
   height: 800px;
@@ -41,9 +42,9 @@ a {
 }
 
 .nav-links {
-  list-style: none; 
-  display: flex; 
-  flex-direction: row; 
+  list-style: none;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 20px;
   font-family: 'Didot', serif;
@@ -54,9 +55,8 @@ a {
   padding: 20px;
 }
 
-
 .nav-links li a:hover {
-color:white;
+  color: white;
 }
 
 .topnav {
@@ -76,22 +76,21 @@ color:white;
 
 #homepage-reviews {
   display: flex;
-  flex-direction: row;
-  margin: 10px 180px;
+  flex-wrap: wrap;
+  margin: 10px;
   text-align: -webkit-center;
 }
 
 .homepage-reviews-content {
-  padding: 50px;
+  padding: 20px;
 }
 
 .homepage-review-text {
-  margin: 10px 5px 30px;
-    text-align: initial;
-    background: lavender;
-    padding: 16px;
-    font-family: sans-serif;
-    font-weight: 200;
+  text-align: center;
+  background: lavender;
+  padding: 16px;
+  font-family: sans-serif;
+  font-weight: 200;
 }
 
 .reviews-button {
@@ -101,33 +100,37 @@ color:white;
   border: none;
   text-decoration: none;
   width: 110px;
-  color: black;
 }
 
 button {
-    border: none;
-    all: unset;
+  border: none;
+  all: unset;
+  padding: 10px;
 }
 
 .reviews-h1 {
   text-align: center;
-  margin: 100px;
+  margin: 40px;
 }
 
 #see-all-reviews {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  margin: 20px;
+  padding: 20px;
 }
 
 .see-all-reviews-text {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  margin: 80px 40px 0px 0px;
   z-index: 1;
   line-height: 1;
   width: 600px;
@@ -138,24 +141,25 @@ button {
   font-size: 20px;
   font-family: sans-serif;
   font-weight: 200;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .see-all-reviews-feature-img {
-    margin-left: -0px;
-    width: 500px;
+  margin-left: -0px;
+  width: 500px;
 }
 
 .reviews-feature-img {
   height: 450px;
-  background: url(../assets/mask+hair.jpeg) no-repeat center / cover; 
+  background: url(../assets/mask+hair.jpeg) no-repeat center / cover;
   border-radius: 40px;
   border: 0.03px solid rgb(94, 94, 94);
-  transform: rotate(-3deg); 
-  margin-left: 55px;  
+  transform: rotate(-3deg);
 }
 
 .reviews-feature-img:hover {
-  border-radius: 500px / 300px;
+  border-radius: 500px / 500px;
 }
 
 footer {
@@ -175,7 +179,7 @@ footer {
   padding: 0px 25px;
   display: flex;
   width: auto;
-  gap: 150px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -184,14 +188,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .nav-links  {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .nav-links li {
     padding: 10px;
   }
-  
-
+  /* .reviews-feature-img {
+    margin: 20px 60px 0px 20px;
+  } */
 }
