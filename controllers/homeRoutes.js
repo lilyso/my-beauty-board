@@ -15,8 +15,9 @@ router.get('/review', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    console.log(reviews);
     // Pass serialized data and session flag into template
     res.render('review', {
       reviews,
