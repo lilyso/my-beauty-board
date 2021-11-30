@@ -3,21 +3,24 @@
     "brand": "The Ordinary",
     "type": "Moisturiser",
     "description": "Very light and non greasy",
-    "price": 9.80,
-    "link": "https://www.priceline.com.au/the-ordinary-natural-moisturizing-factors-ha-30-ml"
+    "price": 9.8,
+    "link": "https://www.priceline.com.au/the-ordinary-natural-moisturizing-factors-ha-30-ml",
+    "user_id": 1
   },
   {
     "brand": "Lesse",
     "type": "Mask",
     "description": "Skin feels smooth and smells nice",
     "price": 60,
-    "link": "https://lesseofficial.com/products/bioactive-mask"
+    "link": "https://lesseofficial.com/products/bioactive-mask",
+    "user_id": 2
   },
   {
     "brand": "Kiels",
     "type": "Toner",
     "description": "Refreshing but face feels dry",
     "price": 36.99,
-    "link": "https://www.kiehls.com.au/category/toners/calendula-herbal-extract-alcohol-free-toner/KLKR00006.html#gclsrc=aw.ds&gclid=CjwKCAiA4veMBhAMEiwAU4XRr7TLcUEvIKu6PhR8NaudfsQMs8og9ZhDwl8kYh-XmDEN2vPwng0VoRoCFwkQAvD_BwE&start=1&cgid=face-toners"
-    }
+    "link": "https://www.kiehls.com.au/category/toners/calendula-herbal-extract-alcohol-free-toner/KLKR00006.html#gclsrc=aw.ds&gclid=CjwKCAiA4veMBhAMEiwAU4XRr7TLcUEvIKu6PhR8NaudfsQMs8og9ZhDwl8kYh-XmDEN2vPwng0VoRoCFwkQAvD_BwE&start=1&cgid=face-toners",
+    "user_id": 3
+  }
 ]
