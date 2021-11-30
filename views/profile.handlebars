@@ -9,8 +9,6 @@
     <img src="../assets/add.png" alt="add_pin" class="pint_mock_icon">
   </div>
 </div>
-{{#if reviews.length}}
-<div class="pin_container"></div>
 
 <div class="add_pin_modal">
   <div class="add_pin_container">
@@ -71,22 +69,41 @@
 </div>
 
 {{#if reviews.length}}
-<div class='col-md-6 product-list'>
-  <h3>My Beauty Board:</h3>
+<div class="pin_container"></div>
+<h3>My Beauty Board:</h3>
 
-  {{#each reviews as |product|}}
-  <div class='row mb-2'>
-    <div class='col-md-8'>
-      <h4><a href='/product/{{product.id}}'>{{product.brand}}</a></h4>
+{{#each reviews as |product|}}
+<div class="pin_title">{{pin_details.brand}}</div>
+<div class="pin_modal">
+  <div class="modal_head">
+    <div class="save_card">Save</div>
+  </div>
+
+  <div class="modal_foot">
+    <div class="destination">
+      <div class="pint_mock_icon_container">
+        <img src="../assets/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
+      </div>
+      <span>{{pin_details.destination}}</span>
     </div>
-    <div class='col-md-4'>
-      <button class='btn btn-sm btn-danger' data-id='{{product.id}}'>DELETE</button>
+
+    <div class="pint_mock_icon_container">
+      <img src="../assets/send.png" alt="send" class="pint_mock_icon">
+    </div>
+
+    <div class="pint_mock_icon_container">
+      <img src="../assets/ellipse.png" alt="edit" class="pint_mock_icon">
     </div>
   </div>
-  {{/each}}
 </div>
+
+<div class="pin_image">
+</div>
+
+{{/each}}
+
 {{/if}}
-</div>
+
 
 <script src='./js/profile.js'></script>
 <script src="../js/final_board.js"></script>
