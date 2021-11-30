@@ -1,9 +1,15 @@
 const router = require('express').Router();
+const session = require('express-session');
 const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
+    const userData = await User.create({
+      fname: req.body.fname,
+      lname: req.body.lname,
+      email: req.body.email,
+      password: req.body.password,
+    });
 
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -42,13 +48,12 @@ router.post('/login', async (req, res) => {
 
       res.json({ user: userData, message: 'You are now logged in!' });
     });
-
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.post('/logout', (req, res) => {
+router.post('users/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
