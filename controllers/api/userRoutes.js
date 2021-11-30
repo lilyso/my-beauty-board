@@ -53,8 +53,9 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('users/logout', (req, res) => {
+router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
+    console.log('hellow');
     req.session.destroy(() => {
       res.status(204).end();
     });
