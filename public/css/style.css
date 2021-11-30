@@ -20,6 +20,7 @@ html {
   background-position: center;
 }
 
+
 .background-image {
   height: 800px;
 }
@@ -30,7 +31,7 @@ html {
 }
 
 .header-h1 {
-  color: white;
+  color: rgb(255, 179, 179);
   font-size: 40px;
 }
 
@@ -56,6 +57,16 @@ a {
 
 .nav-links li a:hover {
 color:white;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav .nav-links {
+  display: none;
 }
 
 .homepage-reviews-h1 {
@@ -170,4 +181,17 @@ footer {
 
 .footer-links li a {
   display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links  {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .nav-links li {
+    padding: 10px;
+  }
+  
+
 }
