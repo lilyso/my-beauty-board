@@ -1,9 +1,9 @@
 {{#each reviews as |review| }}
 <div class="text-center allPosts">
   <h2 id="brand">{{review.brand}}</h2>
-  <p id="type">{{review.type}}</p>
-  <p id="price">{{review.price}}</p>
-  <p id="description">{{review.description}}</p>
-  <p id="link">Created by {{user.fname}} on {{format_date date_created}}</p>
+  <p id="type">Product Type: {{review.type}}</p>
+  <p id="price">Price: {{review.price}}</p>
+  <p id="description"> Description: {{review.description}}</p>
+  <p id="link">Find it on: {{review.link}}</p>
 </div>
 {{/each}}
