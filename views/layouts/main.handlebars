@@ -15,17 +15,17 @@
         <div class="background-image">
             <nav class="nav-bar">
                 <ul class="nav-links">
-                    <li><a href="index.html">
+                    <li><a href="/">
                             <h1 class="header-h1">Beauty Board</h1>
                         </a></li>
-                    <li><a href="#about-me" class="about">About</a></li>
-                    <li><a href="#reviews" class="reviews">Reviews</a></li>
-                    <li><a href="#beauty-board" class="beauty-board">Your Beauty Board</a></li>
+                    <li><a href="about-me" class="about">About</a></li>
+                    <li><a href="reviews" class="reviews">Reviews</a></li>
+                    <li><a href="profile" class="beauty-board">Your Beauty Board</a></li>
                             <!-- Conditionally render login or logout links -->
                   {{#if logged_in}}
-                    <li><a href="#login" class="login">Login</a></li>
+                  <li id="logout"><a href="logout">Logout</a></li>
                   {{else}}
-                    <li><a href="#logout">Logout</a></li>
+                    <li id="login"><a href="login" class="login">Login</a></li>
                   {{/if}}
 
                 </ul>
@@ -47,6 +47,7 @@
 
 
 <h1 class="reviews-h1">See All Reviews</h1>
+  <div class="container">
     <div id="see-all-reviews">
         <!-- Left side review content -->
         <div class="see-all-reviews-text">
@@ -55,15 +56,17 @@
                     quo
                     illum aliquam magni consequatur enim perferendis earum asperiores id quasi vitae ipsa dignissimos
                     saepe,
-                    sapiente deleniti, reiciendis modi!</p>
-            </a>
-        </div>
+                    sapiente deleniti, reiciendis modi!
+                </p>
+              </a>
+          </div>
         <!-- Right side review content -->
-        <div class="see-all-reviews-feature-img">
-            <div class="reviews-feature-img"></div>
-        </div>
+            <div class="see-all-reviews-feature-img">
+              <div class="reviews-feature-img">
+              </div>
+            </div>
     </div>
-
+  </div>
 <footer>
     <div class="footer-box">
         <ul class="footer-links">
