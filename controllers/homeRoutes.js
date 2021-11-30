@@ -2,6 +2,29 @@ const router = require('express').Router();
 const { Review, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+router.get('/', async (req, res) => {
+  try {
+    // Get all articles and JOIN with user data
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: User,
+        },
+      ],
+    });
+
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', {
+      reviews,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/review', async (req, res) => {
   try {
     // Get all reviews and JOIN with user data
@@ -15,8 +38,9 @@ router.get('/review', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    console.log(reviews);
     // Pass serialized data and session flag into template
     res.render('review', {
       reviews,
