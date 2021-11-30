@@ -34,6 +34,7 @@ html {
 .header-h1 {
   color: rgb(255, 179, 179);
   font-size: 40px;
+  font-family: 'Didot';
 }
 
 a {
@@ -49,6 +50,7 @@ a {
   padding: 20px;
   font-family: 'Didot', serif;
   align-items: center;
+  font-size: 17px;
 }
 
 .nav-links li {
@@ -72,6 +74,8 @@ a {
 .homepage-reviews-h1 {
   text-align: center;
   margin: 120px 0px 0px 0px;
+  font-family: 'Didot';
+  font-weight: 600;
 }
 
 #homepage-reviews {
@@ -111,6 +115,7 @@ button {
 .reviews-h1 {
   text-align: center;
   margin: 40px;
+  font-family: 'Didot';
 }
 
 #see-all-reviews {
@@ -181,6 +186,7 @@ footer {
   width: auto;
   gap: 20px;
   align-items: center;
+  font-family: 'Didot';
 }
 
 .footer-links li a {
@@ -196,7 +202,5 @@ footer {
   .nav-links li {
     padding: 10px;
   }
-  /* .reviews-feature-img {
-    margin: 20px 60px 0px 20px;
-  } */
+ 
 }

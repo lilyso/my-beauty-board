@@ -42,12 +42,21 @@ router.put('/:id', (req, res) => {
   });
 });
 
-//Create a review
-router.post('/', (req, res) => {
-  Review.create(req.body).then((data) => {
-    console.log(data);
-    res.json(data);
-  });
+//add a review
+router.post('/', withAuth, async (req, res) => {
+  try {
+    const newReview = await Review.create({
+      user_id: req.session.user_id,
+      brand: req.body.brand,
+      type: req.body.type,
+      description: req.body.description,
+      price: req.body.price,
+      link: req.body.link
+    });
+    res.status(200).json(newReview);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 //delete a review
@@ -63,3 +72,16 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
+
+
+//Create a review
+// router.post('/', (req, res) => {
+//   Review.create({
+//     where: {
+//       user_id: req.session.user_id
+//     },
+//   }).then((data) => {
+//     console.log(data);
+//     res.json(data);
+//   });
+// });
