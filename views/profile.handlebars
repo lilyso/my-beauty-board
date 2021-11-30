@@ -4,80 +4,89 @@
   </div>
 </div>
 
-<div class='row mt-4'>
-  <div class='col-md-6'>
-    <h3>Add a new product:</h3>
-
-    <form class='form new-product-form'>
-      <div class='form-group'>
-        <label for='product-brand'>Brand:</label>
-        <input
-          class='form-input'
-          type='text'
-          id='product-brand'
-          name='product-brand'
-        />
-      </div>
-      <div class='form-group'>
-        <label for='product-type'>Type:</label>
-        <input
-          class='form-input'
-          type='text'
-          id='product-type'
-          name='product-type'
-        />
-      </div>
-      <div class='form-group'>
-        <label for='product-price'>Price:</label>
-        <input
-          class='form-input'
-          type='number'
-          id='product-price'
-          name='product-price'
-        />
-      </div>
-      <div class='form-group'>
-        <label for='product-link'>Link to product page:</label>
-        <input
-          class='form-input'
-          type='text'
-          id='product-link'
-          name='product-link'
-        />
-      </div>
-      <div class='form-group'>
-        <label for='product-desc'>Description:</label>
-        <textarea
-          class='form-input'
-          id='product-desc'
-          name='product-desc'
-        ></textarea>
-      </div>
-      <div class='form-group'>
-        <button type='submit' class='btn btn-primary'>Publish</button>
-      </div>
-    </form>
+<div class="navigation_bar">
+  <div class="pint_mock_icon_container add_pin">
+    <img src="../assets/add.png" alt="add_pin" class="pint_mock_icon">
   </div>
+</div>
+{{#if reviews.length}}
+<div class="pin_container"></div>
 
-  {{#if reviews.length}}
-    <div class='col-md-6 product-list'>
-      <h3>My Beauty Board:</h3>
+<div class="add_pin_modal">
+  <div class="add_pin_container">
+    <div class="side" id="left_side">
+      <div class="section1">
+        <div class="pint_mock_icon_container">
+          <img src="../assets/ellipse.png" alt="edit" class="pint_mock_icon">
+        </div>
+      </div>
 
-      {{#each reviews as |product|}}
-        <div class='row mb-2'>
-          <div class='col-md-8'>
-            <h4><a href='/product/{{product.id}}'>{{product.brand}}</a></h4>
+      <div class="section2">
+        <label for="upload_img" id="upload_img_label">
+          <div class="upload_img_container">
+            <div id="dotted_border">
+              <div class="pint_mock_icon_container">
+                <img src="../assets/up-arrow.png" alt="upload_img" class="pint_mock_icon">
+              </div>
+              <div>Click to upload</div>
+            </div>
           </div>
-          <div class='col-md-4'>
-            <button
-              class='btn btn-sm btn-danger'
-              data-id='{{product.id}}'
-            >DELETE</button>
+          <input type="file" name="upload_img" id="upload_img">
+        </label>
+
+        <div class="modals_pin">
+          <div class="pin_image">
+            <!-- <img src="" alt="pin_image"> -->
           </div>
         </div>
-      {{/each}}
+      </div>
+
+      <div class="section3">
+        <div class="save_from_site">Save From Site</div>
+      </div>
     </div>
-  {{/if}}
+
+    <div class="side" id="right_side">
+      <div class="section1">
+        <div class="select_size">
+          <select name="pin_size" id="pin_size">
+            <option value="Select Size" disabled select>Select Size</option>
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+          </select>
+          <div class="save_pin">Save</div>
+        </div>
+      </div>
+
+      <div class="section2">
+        <input placeholder="Brand" type="text" class="new_pin_input" id="pin_title">
+        <input placeholder="Product Type" type="text" class="new_pin_input" id="pin_product_type">
+        <input placeholder="Description" type="text" class="new_pin_input" id="pin_description">
+        <input placeholder="Price" type="text" class="new_pin_input" id="pin_product_price">
+        <input placeholder="Add Product Link" type="text" class="new_pin_input" id="pin_destination">
+      </div>
+    </div>
+  </div>
+</div>
+
+{{#if reviews.length}}
+<div class='col-md-6 product-list'>
+  <h3>My Beauty Board:</h3>
+
+  {{#each reviews as |product|}}
+  <div class='row mb-2'>
+    <div class='col-md-8'>
+      <h4><a href='/product/{{product.id}}'>{{product.brand}}</a></h4>
+    </div>
+    <div class='col-md-4'>
+      <button class='btn btn-sm btn-danger' data-id='{{product.id}}'>DELETE</button>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
 </div>
 
 <script src='./js/profile.js'></script>
+<script src="../js/final_board.js"></script>
