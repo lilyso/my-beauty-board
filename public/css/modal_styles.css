@@ -169,41 +169,36 @@
   max-height: 100%;
 }
 
-#right_side .section1 {
-  display: flex;
-  justify-content: flex-end;
-}
-#right_side .section1 .select_size {
-  width: 236px;
-  height: 40px;
-  display: flex;
-}
-
 .select_size select {
   border: none;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   outline: none;
-
+  padding: 5px;
   font-size: 16px;
 
   background-color: #efefef;
 }
 
-#right_side .section1 .select_size .save_pin {
+.section1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 30px;
+}
+
+.save_pin {
   width: 30%;
   height: 100%;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  display: flex;
   justify-content: center;
   align-items: center;
-
   font-weight: 700;
-
   color: white;
   background-color: #e60023;
   cursor: pointer;
+  padding: 5px;
 }
 
 #right_side .section2 .new_pin_input {

@@ -52,27 +52,29 @@ router.get('/reviews', async (req, res) => {
   }
 });
 
-// router.get('/review', async (req, res) => {
-//   try {
-//     const reviewData = await Review.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['fname', 'lname'],
-//         },
-//       ],
-//     });
+router.get('/about', async (req, res) => {
+  try {
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['fname', 'lname'],
+        },
+      ],
+    });
 
-//     const review = reviewData.get({ plain: true });
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    console.log(reviews);
 
-//     res.render('review', {
-//       ...review,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('about', {
+      layout: 'beautyboard',
+      reviews,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {

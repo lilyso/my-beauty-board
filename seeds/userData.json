@@ -1,17 +1,20 @@
 [
   {
+    "id": 1,
     "fname": "Sally",
     "lname": "Fields",
     "email": "salf@hotmail.com",
     "password": "password12345"
   },
   {
+    "id": 2,
     "fname": "Leonard",
     "lname": "Tino",
     "email": "ltino@gmail.com",
     "password": "password12345"
   },
   {
+    "id": 3,
     "fname": "Amiko",
     "lname": "Tanaka",
     "email": "amikot@yahoo.com",

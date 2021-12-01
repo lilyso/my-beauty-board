@@ -1,9 +1,9 @@
 const add_pin_modal = document.querySelector('.add_pin_modal');
 
-// document.querySelector('.add_pin').addEventListener('click', () => {
-//   add_pin_modal.style.opacity = 1;
-//   add_pin_modal.style.pointerEvents = 'all';
-// });
+document.querySelector('.add_pin').addEventListener('click', () => {
+  add_pin_modal.style.opacity = 1;
+  add_pin_modal.style.pointerEvents = 'all';
+});
 
 document.querySelector('.add_pin_modal').addEventListener('click', (event) => {
   if (event.target === add_pin_modal) {
@@ -90,24 +90,16 @@ function create_pin(pin_details) {
 
     new_pin.innerHTML = `<div class="pin_title">${pin_details.brand}</div>
 <div class="pin_modal">
-    <div class="modal_head">
-        <div class="save_card">Save</div>
-    </div>
 
     <div class="modal_foot">
+      <div class="pint_mock_icon_container">
         <div class="destination">
-            <div class="pint_mock_icon_container">
-                <img src="../assets/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
+          <a href='${pin_details.destination}' target='_blank'><img
+                    src='../assets/upper-right-arrow.png'
+                    alt='destination'
+                    class='pint_mock_icon'
+                  /></a>
             </div>
-            <span>${pin_details.destination}</span>
-        </div>
-
-        <div class="pint_mock_icon_container">
-            <img src="../assets/send.png" alt="send" class="pint_mock_icon">
-        </div>
-
-        <div class="pint_mock_icon_container">
-            <img src="../assets/ellipse.png" alt="edit" class="pint_mock_icon">
         </div>
     </div>
 </div>

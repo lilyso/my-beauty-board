@@ -45,9 +45,7 @@ a {
 .nav-links {
   list-style: none;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
   font-family: 'Didot', serif;
   align-items: center;
   font-size: 17px;
@@ -94,6 +92,46 @@ a {
 .homepage-reviews-content {
   padding: 20px;
   width: 100%;
+}
+
+/* About page styles */
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.text {
+  width: 100%;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 200;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.about-feature-img {
+  width: 100%;
+  padding: 30px 0 30px 0;
+}
+
+.about-img {
+  height: 450px;
+  background: url(/assets/amy-shamblen-xwM61TPMlYk-unsplash.jpg) no-repeat
+    center / cover;
+  border-radius: 40px;
+  border: 0.03px solid rgb(94, 94, 94);
+  transform: rotate(-3deg);
+}
+
+.about-img2 {
+  height: 450px;
+  background: url(/assets/valerie-elash-pG4VMPudxNM-unsplash.jpg) no-repeat
+    center / cover;
+  border-radius: 40px;
+  border: 0.03px solid rgb(94, 94, 94);
+  transform: rotate(3deg);
 }
 
 @media screen and (min-width: 520px) {

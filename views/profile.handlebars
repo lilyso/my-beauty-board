@@ -22,13 +22,15 @@
         <div class='pin_title'><p>{{product.brand}}</p></div>
         <div class='pin_modal'>
           <div class='modal_foot'>
-            <div class='pint_mock_icon_container'>
-              <div class='destination'>
-                <a href='{{product.link}}' target='_blank'><img
-                    src='../assets/upper-right-arrow.png'
-                    alt='destination'
-                    class='pint_mock_icon'
-                  /></a>
+            <div class='destination'>
+              <div class='pint_mock_icon_container'>
+                <div>
+                  <a href='{{product.link}}' target='_blank'><img
+                      src='../assets/upper-right-arrow.png'
+                      alt='destination'
+                      class='pint_mock_icon'
+                    /></a>
+                </div>
               </div>
             </div>
 
@@ -54,13 +56,6 @@
         <label for='upload_img' id='upload_img_label'>
           <div class='upload_img_container'>
             <div id='dotted_border'>
-              <div class='pint_mock_icon_container'>
-                <img
-                  src='../assets/up-arrow.png'
-                  alt='upload_img'
-                  class='pint_mock_icon'
-                />
-              </div>
               <div>Click to upload</div>
             </div>
           </div>
@@ -75,18 +70,20 @@
       </div>
     </div>
 
-    <div class='side' id='right_side'>
-      <div class='section1'>
-        <div class='select_size'>
-          <select name='pin_size' id='pin_size'>
-            <option value='Select Size' disabled select>Select Size</option>
-            <option value='small'>small</option>
-            <option value='medium'>medium</option>
-            <option value='large'>large</option>
-          </select>
-          <div class='save_pin'>Save</div>
-        </div>
+    <div class='section1'>
+      <div class='select_size'>
+        <select name='pin_size' id='pin_size'>
+          <option value='Select Size' disabled select>Select Size</option>
+          <option value='small'>small</option>
+          <option value='medium'>medium</option>
+          <option value='large'>large</option>
+        </select>
       </div>
+      <div class='save_pin'>Save</div>
+
+    </div>
+
+    <div class='side' id='right_side'>
 
       <div class='section2'>
         <input

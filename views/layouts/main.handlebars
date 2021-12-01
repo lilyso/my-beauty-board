@@ -19,14 +19,14 @@
           <li><a href="/">
               <h1 class="header-h1">Beauty Board</h1>
             </a></li>
-          <li><a href="about-me" class="about">About</a></li>
-          <li><a href="reviews" class="reviews">Reviews</a></li>
-          <li><a href="profile" class="beauty-board">Your Beauty Board</a></li>
+          <li><a href="/about" class="about">About</a></li>
+          <li><a href="/reviews" class="reviews">Reviews</a></li>
+          <li><a href="/profile" class="beauty-board">Your Beauty Board</a></li>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-          <button id="logout"><a href="#">Logout</a></button>
+          <li><a href="logout"  id="logout">Logout</a></li>
           {{else}}
-          <button class="login" id="login"><a href="login">Login</a></button>
+          <li id="login"><a href="/login" class="login">Login</a></li>
           {{/if}}
         </ul>
       </nav>
@@ -40,7 +40,7 @@
   </main>
   </div>
 
-  <h1 class="reviews-h1">See All Reviews</h1>
+  <h1 class="reviews-h1">Featured Beauty Board</h1>
   <div class="container">
     <div id="see-all-reviews">
       <!-- Left side review content -->
@@ -76,7 +76,7 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-
+<script src="/js/about.js"></script>
 </body>
 
 </html>
