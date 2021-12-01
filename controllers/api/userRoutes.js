@@ -23,6 +23,7 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+  console.log('this login');
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -47,6 +48,9 @@ router.post('/login', async (req, res) => {
       req.session.logged_in = true;
 
       res.json({ user: userData, message: 'You are now logged in!' });
+
+      // res.redirect('/profile');
+      return;
     });
   } catch (err) {
     res.status(400).json(err);
@@ -56,7 +60,9 @@ router.post('/login', async (req, res) => {
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
-      res.status(204).end();
+      // res.status(204).end();
+      res.redirect('/');
+      return;
     });
   } else {
     res.status(404).end();

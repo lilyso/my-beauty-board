@@ -169,7 +169,7 @@ button {
 
 footer {
   width: auto;
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 .footer-box {
@@ -182,17 +182,26 @@ footer {
 .footer-links {
   list-style: none;
   padding: 0px 25px;
-  display: flex;
+  display: block;
   width: auto;
   gap: 20px;
   align-items: center;
   font-family: 'Didot';
 }
 
+.footer-links li {
+  text-align: center;
+}
+
 .footer-links li a {
   display: inline-block;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-links {
+    display: flex;
+  }
+}
 @media screen and (max-width: 768px) {
   .nav-links {
     display: flex;
@@ -202,5 +211,8 @@ footer {
   .nav-links li {
     padding: 10px;
   }
- 
+}
+
+.username-heading {
+  text-align: center;
 }

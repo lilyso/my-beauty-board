@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{!--
-    <link rel="stylesheet" href="./css/w3schools.css" /> --}}
+    
+    <link rel="stylesheet" href="./css/w3schools.css" />
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/pin_styles.css">
     <link rel="stylesheet" href="../../css/modal_styles.css">
@@ -20,28 +20,24 @@
             <li><a href="/">
                     <h1 class="header-h1">Beauty Board</h1>
                 </a></li>
-            <li><a href="about-me" class="about">About</a></li>
-            <li><a href="reviews" class="reviews">Reviews</a></li>
-            <li><a href="profile" class="beauty-board">Your Beauty Board</a></li>
+            <li><a href="/about-me" class="about">About</a></li>
+            <li><a href="/reviews" class="reviews">Reviews</a></li>
+            <li><a href="/profile" class="beauty-board">Your Beauty Board</a></li>
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
-            <li id="logout"><a href="logout">Logout</a></li>
+            <li><a href="logout"  id="logout">Logout</a></li>
             {{else}}
-            <li id="login"><a href="login" class="login">Login</a></li>
+            <li id="login"><a href="/login" class="login">Login</a></li>
             {{/if}}
         </ul>
     </nav>
-<<<<<<< HEAD
 
-    <main class="container container-fluid mt-5">
+    <main class="mt-5">
         <!-- Render the sub layout -->
         {{{ body }}}
     </main>
 
     </div>
-=======
-    {{{body}}}
->>>>>>> main
     <footer>
         <div class="footer-box">
             <ul class="footer-links">
@@ -53,7 +49,9 @@
             </ul>
         </div>
     </footer>
-
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 <script src="../../js/final_board.js"></script>
 

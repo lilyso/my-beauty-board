@@ -82,7 +82,7 @@ router.get('/profile', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: Review }],
     });
-
+    // res.json(userData);
     const user = userData.get({ plain: true });
     console.log(user);
     res.render('profile', {
@@ -105,6 +105,18 @@ router.get('/login', (req, res) => {
   res.render('login', {
     layout: 'beautyboard',
   });
+});
+
+router.get('/logout', (req, res) => {
+  console.log('Hello');
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    console.log('here');
+    res.status(404).end();
+  }
 });
 
 module.exports = router;

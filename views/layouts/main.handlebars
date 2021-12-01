@@ -40,12 +40,6 @@
   </main>
   </div>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-
-
   <h1 class="reviews-h1">See All Reviews</h1>
   <div class="container">
     <div id="see-all-reviews">
@@ -78,6 +72,11 @@
       </ul>
     </div>
   </footer>
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
 </body>
 
 </html>
