@@ -43,7 +43,7 @@ router.get('/reviews', async (req, res) => {
     console.log(reviews);
     // Pass serialized data and session flag into template
     res.render('review', {
-      layout: "beautyboard",
+      layout: 'beautyboard',
       reviews,
       logged_in: req.session.logged_in,
     });

@@ -51,7 +51,7 @@ router.post('/', withAuth, async (req, res) => {
       type: req.body.type,
       description: req.body.description,
       price: req.body.price,
-      link: req.body.link
+      link: req.body.link,
     });
     res.status(200).json(newReview);
   } catch (err) {
@@ -72,7 +72,6 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
-
 
 //Create a review
 // router.post('/', (req, res) => {
