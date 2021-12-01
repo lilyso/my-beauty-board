@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/review', async (req, res) => {
+router.get('/reviews', async (req, res) => {
   try {
     // Get all reviews and JOIN with user data
     const reviewData = await Review.findAll({
@@ -43,6 +43,7 @@ router.get('/review', async (req, res) => {
     console.log(reviews);
     // Pass serialized data and session flag into template
     res.render('review', {
+      layout: "beautyboard",
       reviews,
       logged_in: req.session.logged_in,
     });
