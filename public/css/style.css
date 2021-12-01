@@ -16,14 +16,14 @@ html {
 }
 
 #header-section {
-  background-image: url(../assets/Landing-page.jpg);
+  background-image: url(/assets/johanne-kristensen-XYkc3MfT7b4-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .background-image {
-  height: 800px;
+  height: 600px;
 }
 
 #header-section img {
@@ -42,6 +42,9 @@ a {
   color: black;
 }
 
+.header-h1 a:hover {
+  color: white;
+}
 .nav-links {
   list-style: none;
   display: flex;
@@ -266,6 +269,17 @@ footer {
     min-height: 275px;
   }
 }
+
+@media screen and (min-width: 520px) {
+  .homepage-reviews-content {
+    padding: 20px;
+    width: 50%;
+  }
+  .homepage-review-text {
+    min-height: 250px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .homepage-reviews-content {
     padding: 20px;
@@ -295,15 +309,5 @@ footer {
   .log-button {
     display: flex;
     justify-content: center;
-  }
-}
-
-@media screen and (min-width: 520px) {
-  .homepage-reviews-content {
-    padding: 20px;
-    width: 50%;
-  }
-  .homepage-review-text {
-    min-height: 250px;
   }
 }
