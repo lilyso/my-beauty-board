@@ -15,7 +15,7 @@ const newReview = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/review');
+            document.location.replace('/reviews');
         } else {
             alert('Failed to create review');
         }
