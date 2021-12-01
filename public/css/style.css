@@ -134,42 +134,7 @@ a {
   transform: rotate(3deg);
 }
 
-@media screen and (min-width: 520px) {
-  .homepage-reviews-content {
-    padding: 20px;
-    width: 50%;
-  }
-  .homepage-review-text {
-    min-height: 250px;
-  }
-}
-@media screen and (min-width: 768px) {
-  #homepage-reviews {
-    /* flex-wrap: nowrap; */
-  }
-
-  .homepage-reviews-content {
-    padding: 20px;
-    width: 33.3%;
-  }
-  .homepage-review-text {
-    min-height: 275px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #homepage-reviews {
-    /* flex-wrap: nowrap; */
-  }
-
-  .homepage-reviews-content {
-    padding: 20px;
-    width: 25%;
-  }
-
-  .homepage-review-text {
-    min-height: 300px;
-  }
-}
+/* End About Page Styles */
 
 .homepage-reviews-content img {
   width: 100%;
@@ -293,10 +258,28 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .homepage-reviews-content {
+    padding: 20px;
+    width: 33.3%;
+  }
+  .homepage-review-text {
+    min-height: 275px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .homepage-reviews-content {
+    padding: 20px;
+    width: 25%;
+  }
+
+  .homepage-review-text {
+    min-height: 300px;
+  }
   .footer-links {
     display: flex;
   }
 }
+
 @media screen and (max-width: 768px) {
   .nav-links {
     display: flex;
@@ -312,5 +295,15 @@ footer {
   .log-button {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .homepage-reviews-content {
+    padding: 20px;
+    width: 50%;
+  }
+  .homepage-review-text {
+    min-height: 250px;
   }
 }
