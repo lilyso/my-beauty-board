@@ -16,7 +16,8 @@ html {
 }
 
 #header-section {
-  background-image: url(/assets/johanne-kristensen-XYkc3MfT7b4-unsplash.jpg);
+  background-image: linear-gradient(to top, transparent, white),
+    url(/assets/johanne-kristensen-XYkc3MfT7b4-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -42,9 +43,6 @@ a {
   color: black;
 }
 
-.header-h1 a:hover {
-  color: white;
-}
 .nav-links {
   list-style: none;
   display: flex;
@@ -59,7 +57,7 @@ a {
 }
 
 .nav-links li a:hover {
-  color: white;
+  color: rgb(255, 179, 179);
 }
 
 .topnav {
