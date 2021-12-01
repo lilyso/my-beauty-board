@@ -15,22 +15,24 @@
 </head>
 
 <body>
-    <nav class="nav-bar">
-        <ul class="nav-links">
-            <li><a href="/">
-                    <h1 class="header-h1">Beauty Board</h1>
-                </a></li>
-            <li><a href="/about-me" class="about">About</a></li>
-            <li><a href="/reviews" class="reviews">Reviews</a></li>
-            <li><a href="/profile" class="beauty-board">Your Beauty Board</a></li>
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-            <li><a href="logout"  id="logout">Logout</a></li>
-            {{else}}
-            <li id="login"><a href="/login" class="login">Login</a></li>
-            {{/if}}
-        </ul>
-    </nav>
+    <div class="content-container">
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="/">
+                        <h1 class="header-h1">Beauty Board</h1>
+                    </a></li>
+                <li><a href="/about-me" class="about">About</a></li>
+                <li><a href="/reviews" class="reviews">Reviews</a></li>
+                <li><a href="/profile" class="beauty-board">Your Beauty Board</a></li>
+                <!-- Conditionally render login or logout links -->
+                {{#if logged_in}}
+                <li><a href="logout"  id="logout">Logout</a></li>
+                {{else}}
+                <li id="login"><a href="/login" class="login">Login</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </div>
 
     <main class="mt-5">
         <!-- Render the sub layout -->
