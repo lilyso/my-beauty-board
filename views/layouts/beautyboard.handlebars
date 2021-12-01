@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/w3schools.css" />
-    <link rel="stylesheet" href="../../public/css/final_board.css">
-    <link rel="stylesheet" href="../css/style.css">
+    {{!--
+    <link rel="stylesheet" href="./css/w3schools.css" /> --}}
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pin_styles.css">
+    <link rel="stylesheet" href="../../css/modal_styles.css">
+    <link rel="stylesheet" href="../../css/final_board.css">
     <title>Document</title>
 </head>
 
@@ -30,6 +33,12 @@
         </ul>
     </nav>
 
+    <main class="container container-fluid mt-5">
+        <!-- Render the sub layout -->
+        {{{ body }}}
+    </main>
+
+    </div>
     <footer>
         <div class="footer-box">
             <ul class="footer-links">
@@ -43,5 +52,6 @@
     </footer>
 
 </body>
+<script src="../../js/final_board.js"></script>
 
 </html>
