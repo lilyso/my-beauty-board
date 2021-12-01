@@ -125,6 +125,30 @@ function create_pin(pin_details) {
     }
 }
 
+const saveReview = async (event) => {
+
+    const brand = document.querySelector('#pin_title').value.trim();
+    const type = document.querySelector('#pin_product_type').value.trim();
+    const price = document.querySelector('#pin_description').value.trim();
+    const description = document.querySelector('#pin_description').value.trim();
+    const destination = document.querySelector('#pin_product_price').value.trim();
+    if (brand && type && price && description && destination) {
+        const response = await fetch(`/api/profile`, {
+            method: 'POST',
+            body: JSON.stringify({ brand, type, price, description, destination }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.ok) {
+            document.location.replace('/profile');
+        } else {
+            alert('Failed to create product');
+        }
+    }
+};
+
 
 function reset_modal() {
     const modals_pin = document.querySelector('.add_pin_modal .modals_pin');
@@ -146,3 +170,7 @@ function reset_modal() {
     document.querySelector('#pin_size').value = '';
     pinImageBlog = null;
 }
+
+document
+    .querySelector('.save_pin')
+    .addEventListener('submit', saveReview);

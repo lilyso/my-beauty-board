@@ -1,8 +1,39 @@
 <div class='row'>
   <div class='col-auto'>
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{fname}}!</h2>
   </div>
 </div>
+
+
+{{#if user.reviews}}
+<div class="pin_container"></div>
+
+{{#each reviews as |product|}}
+<div class="pin_title">{{user.reviews.brand}}</div>
+<div class="pin_modal">
+  <div class="modal_head">
+    <div class="save_card">Save</div>
+  </div>
+
+  <div class="modal_foot">
+    <div class="destination">
+      <div class="pint_mock_icon_container">
+        <img src="../assets/upper-right-arrow.png" alt="destination" class="pint_mock_icon" />
+      </div>
+      <span>{{user.reviews.destination}}</span>
+    </div>
+
+    <div class="pint_mock_icon_container">
+      <img src="../assets/send.png" alt="send" class="pint_mock_icon" />
+    </div>
+
+    <div class="pint_mock_icon_container">
+      <img src="../assets/ellipse.png" alt="edit" class="pint_mock_icon" />
+    </div>
+  </div>
+</div>
+{{/each}}
+{{/if}}
 
 <div class="navigation_bar">
   <div class="pint_mock_icon_container add_pin">
@@ -67,43 +98,3 @@
     </div>
   </div>
 </div>
-
-{{#if reviews.length}}
-<div class="pin_container"></div>
-<h3>My Beauty Board:</h3>
-
-{{#each reviews as |product|}}
-<div class="pin_title">{{user.reviews.brand}}</div>
-<div class="pin_modal">
-  <div class="modal_head">
-    <div class="save_card">Save</div>
-  </div>
-
-  <div class="modal_foot">
-    <div class="destination">
-      <div class="pint_mock_icon_container">
-        <img src="../assets/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-      </div>
-      <span>{{user.reviews.destination}}</span>
-    </div>
-
-    <div class="pint_mock_icon_container">
-      <img src="../assets/send.png" alt="send" class="pint_mock_icon">
-    </div>
-
-    <div class="pint_mock_icon_container">
-      <img src="../assets/ellipse.png" alt="edit" class="pint_mock_icon">
-    </div>
-  </div>
-</div>
-
-<div class="pin_image"> Hello
-</div>
-
-{{/each}}
-
-{{/if}}
-
-
-<script src='./js/profile.js'></script>
-<script src="../js/final_board.js"></script>
