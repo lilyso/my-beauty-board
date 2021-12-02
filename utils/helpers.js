@@ -1,7 +1,7 @@
 module.exports = {
   format_date: (date) => {
     // Format date as MM/DD/YYYY
-    // return date.toLocaleDateString();
+    return date.toLocaleDateString();
   },
   truncate_text: (passedString) => {
     // Truncates text to 100 characters max
@@ -14,7 +14,5 @@ module.exports = {
     } else {
       return opts.inverse(this);
     }
-  }
+  },
 };
-
-
