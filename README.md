@@ -109,6 +109,7 @@ Room for improvement:
 
 - Content flow and UX
 - Design elements for reviews and board
+- Ability to filter review by product or type
 
 To do:
 
@@ -116,6 +117,7 @@ To do:
 - Add form to add user's skin type, level and preference to be displayed in their dashboard/profile
 - Profile and featured pin boards to share a regime
 - Share button for reviews/products
+- Add rating system
 
 
 ## Acknowledgements
