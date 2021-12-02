@@ -1,0 +1,76 @@
+<div class='content-container'>
+  <div id='about-container'>
+    <!-- Left side review content -->
+    <h2>Beauty Brain Trust</h2>
+    <p class='text'>Your personal experience and beauty journey is what makes
+      Beauty Board the go-to website for people looking for tips, inspo and
+      community driven advice on the latest beauty products.
+    </p>
+    <p class='text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Vel cupiditate dolore quo illum aliquam magni consequatur enim perferendis
+      earum asperiores id quasi vitae ipsa dignissimos saepe, sapiente deleniti,
+      reiciendis modi!
+    </p>
+    <!-- Right side review content -->
+    <div class='about-feature-img'>
+      <div class='about-img'>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='content-container'>
+  <div id='about-container'>
+    <h2>Your Personal Beauty Diary</h2>
+    <p class='text'>Cosmetics and beauty products have come a long way and there
+      are more options for every type of skin type and lifestyle. With Beauty
+      Board you can keep track of your favourites and share your experience with
+      the BB community!
+    </p>
+    <p class='text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Vel cupiditate dolore quo illum aliquam magni consequatur enim perferendis
+      earum asperiores id quasi vitae ipsa dignissimos saepe, sapiente deleniti,
+      reiciendis modi.
+    </p>
+    <div class='about-feature-img'>
+      <div class='about-img2'>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='content-container'>
+  <p class='text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
+    cupiditate dolore quo illum aliquam magni consequatur enim perferendis earum
+    asperiores id quasi vitae ipsa dignissimos saepe, sapiente deleniti,
+    reiciendis modi.
+  </p>
+</div>
+<div class='content-container'>
+  <h2>Check out the latest reviews!</h2>
+  <div class='row mb-4 product'>
+    <div class='col-md-5'>
+      <div id='homepage-reviews' class='content-container'>
+        {{#each reviews as |product|}}
+          <div class='homepage-reviews-content'>
+
+            <img
+              class='homepage-review-image'
+              src='../assets/AYU_002.jpeg'
+              alt='Footer Logo'
+            />
+            <div class='homepage-review-text'>
+              <h2>
+                <a href='/product/{{product.id}}'>{{product.brand}}</a>
+              </h2>
+              <p>{{type}}</p>
+              <p>{{description}}</p>
+              <p class='w3-margin-bottom'>-
+                {{user.fname}}
+                ({{format_date date_created}})</p>
+              <a class='reviews-button w3-margin-top' href='#review1'>See Review</a>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

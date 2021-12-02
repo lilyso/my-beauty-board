@@ -49,9 +49,9 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
       brand: req.body.brand,
       type: req.body.type,
-      description: req.body.description,
       price: req.body.price,
-      link: req.body.link
+      description: req.body.description,
+      link: req.body.link,
     });
     res.status(200).json(newReview);
   } catch (err) {
@@ -72,7 +72,6 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
-
 
 //Create a review
 // router.post('/', (req, res) => {
