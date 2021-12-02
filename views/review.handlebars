@@ -15,7 +15,7 @@
             {{product.user.fname}}
             on
             {{format_date product.date_created}}</p>
-          <a class='reviews-button w3-margin-top' href='#review1'><button class='homepage-review-button'>See
+          <a class='reviews-button w3-margin-top'><button class='reviewPage-button'>See
               Review</button></a>
         </div>
       </div>
@@ -24,4 +24,24 @@
 
   </div>
 </div>
-
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Comment</h5>
+        <div class="form-group">
+          <label for="post-content">Content:</label>
+          <textarea class="form-input" id="edit-post-comment" name="post-content">{{post.content}}</textarea>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary saveComment" data-id="{{post.id}}">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
