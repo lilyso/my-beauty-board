@@ -86,8 +86,9 @@ a {
 
 #homepage-reviews {
   display: flex;
-  flex-wrap: wrap;
-  text-align: -webkit-center;
+    text-align: -webkit-center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .homepage-reviews-content {
@@ -177,7 +178,6 @@ button {
 
 #see-all-reviews {
   max-width: 100%;
-  width: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,8 +185,7 @@ button {
 }
 
 .container {
-  margin: 20px;
-  padding: 20px;
+  margin: 0px 0px 50px;
 }
 
 .see-all-reviews-text {
@@ -232,7 +231,7 @@ footer {
 .footer-box {
   display: flex;
   flex-flow: row wrap;
-  padding: 50px;
+  padding: 100px 100px 50px;
   justify-content: center;
 }
 
@@ -258,13 +257,17 @@ footer {
   text-align: center;
 }
 
+#pint_mock_icon {
+  margin-left: 7px;
+}
+
 @media screen and (min-width: 768px) {
   .homepage-reviews-content {
     padding: 20px;
     width: 33.3%;
   }
   .homepage-review-text {
-    min-height: 275px;
+    height: 250px;
   }
 }
 
@@ -272,9 +275,6 @@ footer {
   .homepage-reviews-content {
     padding: 20px;
     width: 50%;
-  }
-  .homepage-review-text {
-    min-height: 250px;
   }
 }
 
@@ -285,7 +285,7 @@ footer {
   }
 
   .homepage-review-text {
-    min-height: 300px;
+    height: 250px;
   }
   .footer-links {
     display: flex;
@@ -303,9 +303,30 @@ footer {
   }
 }
 
+@media screen and (max-width: 900px) {
+  #homepage-reviews {
+    display: flex;
+      text-align: -webkit-center;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .homepage-reviews-content {
+    padding: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
 @media screen and (max-width: 600px) {
   .log-button {
     display: flex;
     justify-content: center;
   }
+
+  .homepage-review-text {
+    font-size: 12px;
+
 }
