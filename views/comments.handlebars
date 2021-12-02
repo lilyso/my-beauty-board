@@ -1,9 +1,9 @@
 <input type="hidden" id="reviewId" value="{{id}}" />
 <!-- Render review -->
 <div class="mx-2">
-    <h2>{{reviews}}</h2>
+    <h2>{{brand}}</h2>
     <p>Created by {{user.fname}} on {{format_date date_created}}</p>
-    <p>{{{content}}}</p>
+    <p>{{description}}</p>
 
     <!-- If article has comments, render comments -->
     {{#if comments.length}}
