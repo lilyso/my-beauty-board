@@ -90,10 +90,10 @@ function create_pin(pin_details) {
     new_pin.classList.add(`card_${pin_details.pinSize}`);
     new_image.classList.add('pin_max_width');
 
-    new_pin.innerHTML = `<div id="pin_title" data-brand="${newReview_data.brand}"></div>
-    <div id="pin_product_type" data-type="${newReview_data.productType}"></div>
-    <div id="pin_product_price" data-price="${newReview_data.price}"></div>
-    <div id="pin_description" data-descr="${newReview_data.description}"></div>
+    new_pin.innerHTML = `<div id="pin_title" data-brand='${newReview_data.brand}'></div>
+    <div id="pin_product_type" data-type='${newReview_data.productType}'></div>
+    <div id="pin_product_price" data-price='${newReview_data.price}'></div>
+    <div id="pin_description" data-descr='${newReview_data.description}'></div>
 <div class="pin_modal">
 
     <div class="modal_foot">
@@ -130,11 +130,6 @@ function create_pin(pin_details) {
 }
 
 const saveReview = async (newReview_data) => {
-  // const brand = document.querySelector('#pin_title').value.trim();
-  // const type = document.querySelector('#pin_product_type').value.trim();
-  // const price = document.querySelector('#pin_product_price').value.trim();
-  // const description = document.querySelector('#pin_description').value.trim();
-  // const link = document.querySelector('#pin_destination').value.trim();
   const brand = newReview_data.brand;
   const type = newReview_data.productType;
   const price = newReview_data.price;

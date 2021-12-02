@@ -19,10 +19,19 @@
   {{#if reviews.length}}
     {{#each reviews as |product|}}
       <div class='card card_small'>
-        <div id='pin_title' data-brand='{{product.brand}}'></div>
-        <div id='pin_product_type' data-type='{{product.type}}'></div>
-        <div id='pin_product_price' data-price='{{product.price}}'></div>
-        <div id='pin_description' data-descr='{{product.description}}'></div>
+        <div id='pin_title{{product.id}}' data-brand='{{product.brand}}'></div>
+        <div
+          id='pin_product_type{{product.id}}'
+          data-type='{{product.type}}'
+        ></div>
+        <div
+          id='pin_product_price{{product.id}}'
+          data-price='{{product.price}}'
+        ></div>
+        <div
+          id='pin_description{{product.id}}'
+          data-descr='{{product.description}}'
+        ></div>
         <div class='pin_modal'>
           <div class='modal_foot'>
             <div class='destination'>
