@@ -49,13 +49,12 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
       brand: req.body.brand,
       type: req.body.type,
-      description: req.body.description,
       price: req.body.price,
+      description: req.body.description,
       link: req.body.link,
     });
     res.status(200).json(newReview);
   } catch (err) {
-    console.log(response);
     res.status(400).json(err);
   }
 });
