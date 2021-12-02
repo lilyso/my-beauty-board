@@ -86,8 +86,9 @@ a {
 
 #homepage-reviews {
   display: flex;
-  flex-wrap: wrap;
-  text-align: -webkit-center;
+    text-align: -webkit-center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .homepage-reviews-content {
@@ -128,8 +129,7 @@ a {
 
 .about-img2 {
   height: 450px;
-  background: url(/assets/valerie-elash-pG4VMPudxNM-unsplash.jpg) no-repeat
-    center / cover;
+  background: url(/assets/valerie-elash-pG4VMPudxNM-unsplash.jpg) no-repeat center / cover;
   border-radius: 40px;
   border: 0.03px solid rgb(94, 94, 94);
   transform: rotate(3deg);
@@ -177,7 +177,6 @@ button {
 
 #see-all-reviews {
   max-width: 100%;
-  width: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,7 +231,7 @@ footer {
 .footer-box {
   display: flex;
   flex-flow: row wrap;
-  padding: 50px;
+  padding: 100px 100px 50px;
   justify-content: center;
 }
 
@@ -257,6 +256,11 @@ footer {
 .username-heading {
   text-align: center;
 }
+
+#pint_mock_icon {
+  margin-left: 7px;
+}
+
 
 @media screen and (min-width: 768px) {
   .homepage-reviews-content {
@@ -303,9 +307,30 @@ footer {
   }
 }
 
+@media screen and (max-width: 900px) {
+  #homepage-reviews {
+    display: flex;
+      text-align: -webkit-center;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .homepage-reviews-content {
+    padding: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
 @media screen and (max-width: 600px) {
   .log-button {
     display: flex;
     justify-content: center;
   }
+
+  .homepage-review-text {
+    font-size: 12px;
+
 }
