@@ -1,0 +1,55 @@
+<input type="hidden" id="reviewId" value="{{id}}" />
+<!-- Render review -->
+<div class="mx-2">
+    <h2>{{reviews}}</h2>
+    <p>Created by {{user.fname}} on {{format_date date_created}}</p>
+    <p>{{{content}}}</p>
+
+    <!-- If article has comments, render comments -->
+    {{#if comments.length}}
+    {{#each comments as |comment|}}
+    <div class="flex-column align-items-center justify-content-center mb-2">
+        <div class="comment-{{comment.id}}-text">
+            <p class="mb-0 comment-{{comment.id}}-p">"{{comment.comment}}" </p>
+            <p>- {{comment.user.user_name}} ({{format_date comment.date_created}})</p>
+        </div>
+        <!-- Edit comment form can only be activated if user is logged in -->
+        {{#compare comment.user_id ../uid}}
+        <div class="comment-{{comment.id}}-form d-none">
+            <form class="update-comment "><input type="hidden" name="id" value="{{comment.id}}"><input
+                    value="{{comment.comment}}" type="text" id="comment-{{comment.id}}" name="comment"
+                    class="form-control" /></form>
+        </div>
+        {{/compare}}
+        <!-- User can only edit/delete their own comments if logged in -->
+        {{#compare comment.user_id ../uid}}
+        <div class="d-flex px-4">
+            <p data-id="{{comment.id}}" class="px-2 mb-0 comment-link edit-comment-link">
+                Edit</p>
+            <p data-id="{{comment.id}}" class="px-2 mb-0 comment-link delete-comment">
+                Delete</p>
+        </div>
+        {{/compare}}
+    </div>
+    {{/each}}
+    {{/if}}
+    <!-- User can only leave a comment if logged in -->
+    {{#if logged_in}}
+    <div class="row mt-4">
+        <div class="w-full">
+            <form class="form new-comment">
+                <div>
+                    <label for="comment">Add a comment:</label>
+                    <input class="form-control mt-2" type="text" id="comment" name="comment" />
+                </div>
+                <div>
+                    <button type="submit" class="mt-4">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {{else}}
+    <p><em>Please log in to share, edit or delete your comment</em></p>
+    {{/if}}
+</div>
+<script src="/js/comments.js"></script>
