@@ -261,6 +261,15 @@ footer {
   margin-left: 7px;
 }
 
+.modal-read-more-btn{
+  padding: 6px;
+  margin-bottom: 17px;
+  margin-right: 119px;
+  border: none;
+  background-color: #bdcbf3;
+  border-radius: 10px;
+}
+
 
 @media screen and (min-width: 768px) {
   .homepage-reviews-content {
