@@ -129,8 +129,7 @@ a {
 
 .about-img2 {
   height: 450px;
-  background: url(/assets/valerie-elash-pG4VMPudxNM-unsplash.jpg) no-repeat
-    center / cover;
+  background: url(/assets/valerie-elash-pG4VMPudxNM-unsplash.jpg) no-repeat center / cover;
   border-radius: 40px;
   border: 0.03px solid rgb(94, 94, 94);
   transform: rotate(3deg);
@@ -185,7 +184,8 @@ button {
 }
 
 .container {
-  margin: 0px 0px 50px;
+  margin: 20px;
+  padding: 20px;
 }
 
 .see-all-reviews-text {
@@ -257,17 +257,13 @@ footer {
   text-align: center;
 }
 
-#pint_mock_icon {
-  margin-left: 7px;
-}
-
 @media screen and (min-width: 768px) {
   .homepage-reviews-content {
     padding: 20px;
     width: 33.3%;
   }
   .homepage-review-text {
-    height: 250px;
+    min-height: 275px;
   }
 }
 
@@ -275,6 +271,9 @@ footer {
   .homepage-reviews-content {
     padding: 20px;
     width: 50%;
+  }
+  .homepage-review-text {
+    min-height: 250px;
   }
 }
 
@@ -285,7 +284,7 @@ footer {
   }
 
   .homepage-review-text {
-    height: 250px;
+    min-height: 300px;
   }
   .footer-links {
     display: flex;
