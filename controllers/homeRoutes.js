@@ -86,7 +86,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
     console.log(user);
     res.render('profile', {
-      layout: "beautyboard",
+      layout: 'beautyboard',
       ...user,
       logged_in: true,
     });
@@ -102,7 +102,9 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    layout: 'beautyboard',
+  });
 });
 
 module.exports = router;

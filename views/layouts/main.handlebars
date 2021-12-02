@@ -24,11 +24,10 @@
           <li><a href="profile" class="beauty-board">Your Beauty Board</a></li>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-          <button id="logout">Logout</button>
+          <button id="logout"><a href="logout">Logout</a></button>
           {{else}}
-          <button class="login" id="login">Login</button>
+          <button class="login" id="login"><a href="login">Login</a></button>
           {{/if}}
-
         </ul>
       </nav>
     </div>
