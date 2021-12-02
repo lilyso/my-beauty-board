@@ -3,7 +3,7 @@ const newCommentHandler = async (event) => {
     event.preventDefault();
 
     const newComment = document.querySelector("#comment").value.trim();
-    const reviewId = document.querySelector("#articleId").value;
+    const reviewId = document.querySelector("#reviewId").value;
 
     if (newComment) {
         const response = await fetch("/api/comments", {

@@ -37,15 +37,15 @@
 {{/if}}
 <!-- User can only leave a comment if logged in -->
 {{#if logged_in}}
-<div class="row mt-4">
+<div class="comment-section">
     <div class="w-full">
         <form class="form new-comment">
             <div>
-                <label for="comment">Add a comment:</label>
-                <input class="form-control mt-2" type="text" id="comment" name="comment" />
+                <label for="comment" id="comment">Add a comment:</label>
+                <input class="form-control mt-2" type="text" name="comment" />
             </div>
-            <div>
-                <button type="submit" class="mt-4">Submit</button>
+            <div id="submit">
+                <input type="submit" value="Submit">
             </div>
         </form>
     </div>

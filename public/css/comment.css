@@ -1,7 +1,15 @@
 .parent-review{
     display:flex;
-    justify-content:center
+    justify-content:center;
+    line-height: 3rem;
 }
-.rendered-review{
-    display:block;
+.comment-section{
+    display:flex;
+    justify-content:center;
+    padding-top:3rem;
+}
+
+#submit{
+    margin-left:7rem;
+    padding-top:3rem
 }

@@ -86,9 +86,10 @@ a {
 
 #homepage-reviews {
   display: flex;
-    text-align: -webkit-center;
-    flex-direction: row;
-    justify-content: center;
+  flex-wrap: wrap;
+  text-align: -webkit-center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .homepage-reviews-content {
