@@ -2,7 +2,23 @@
   {
     "brand": "The Ordinary",
     "type": "Moisturiser",
-    "description": "Very light and non greasy",
+    "description": "Very light and non greasy. I love it as my day time moisturiser. It's great that it is fragrance free and doesn't smell weird! My only issue is that the bottles are too small.",
+    "price": 9.8,
+    "link": "https://www.priceline.com.au/the-ordinary-natural-moisturizing-factors-ha-30-ml",
+    "user_id": 1
+  },
+  {
+    "brand": "The Ordinary",
+    "type": "Mask",
+    "description": "Stings but skin is very smooth",
+    "price": 10.8,
+    "link": "https://www.priceline.com.au/the-ordinary-natural-moisturizing-factors-ha-30-ml",
+    "user_id": 1
+  },
+  {
+    "brand": "The Ordinary",
+    "type": "Serum",
+    "description": "My skin is clearer after a month of using it",
     "price": 9.8,
     "link": "https://www.priceline.com.au/the-ordinary-natural-moisturizing-factors-ha-30-ml",
     "user_id": 1

@@ -43,7 +43,7 @@ router.get('/reviews', async (req, res) => {
     console.log(reviews);
     // Pass serialized data and session flag into template
     res.render('review', {
-      layout: "beautyboard",
+      layout: 'beautyboard',
       reviews,
       logged_in: req.session.logged_in,
     });
@@ -52,27 +52,29 @@ router.get('/reviews', async (req, res) => {
   }
 });
 
-// router.get('/review', async (req, res) => {
-//   try {
-//     const reviewData = await Review.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['fname', 'lname'],
-//         },
-//       ],
-//     });
+router.get('/about', async (req, res) => {
+  try {
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['fname', 'lname'],
+        },
+      ],
+    });
 
-//     const review = reviewData.get({ plain: true });
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    console.log(reviews);
 
-//     res.render('review', {
-//       ...review,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('about', {
+      layout: 'beautyboard',
+      reviews,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
@@ -82,7 +84,7 @@ router.get('/profile', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: Review }],
     });
-
+    // res.json(userData);
     const user = userData.get({ plain: true });
     console.log(user);
     res.render('profile', {
@@ -105,6 +107,18 @@ router.get('/login', (req, res) => {
   res.render('login', {
     layout: 'beautyboard',
   });
+});
+
+router.get('/logout', (req, res) => {
+  console.log('Hello');
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    console.log('here');
+    res.status(404).end();
+  }
 });
 
 module.exports = router;

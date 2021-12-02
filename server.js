@@ -22,10 +22,9 @@ const sess = {
   store: new SequelizeStore({
     db: sequelize,
     // Check active user every hour
-    checkExpirationInterval: 60 * 1000,
+    checkExpirationInterval: 60 * 60 * 1000,
     // Session expires after 4 hours
-    expiration: 60 * 1000,
-
+    expiration: 60 * 60 * 1000,
   }),
 };
 
