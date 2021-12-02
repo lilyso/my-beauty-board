@@ -55,6 +55,7 @@ router.post('/', withAuth, async (req, res) => {
     });
     res.status(200).json(newReview);
   } catch (err) {
+    console.log(response);
     res.status(400).json(err);
   }
 });

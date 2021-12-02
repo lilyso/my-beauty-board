@@ -1,3 +1,4 @@
+let newReview_data = {};
 const add_pin_modal = document.querySelector('.add_pin_modal');
 
 document.querySelector('.add_pin').addEventListener('click', () => {
@@ -60,19 +61,20 @@ document.querySelector('#upload_img').addEventListener('change', (event) => {
 });
 
 document.querySelector('.save_pin').addEventListener('click', () => {
-  const users_data = {
+  newReview_data = {
     author: 'Alexis',
     board: 'default',
     brand: document.querySelector('#pin_title').value,
     productType: document.querySelector('#pin_product_type').value,
     description: document.querySelector('#pin_description').value,
-    price: document.querySelector('#pin_description').value,
-    destination: document.querySelector('#pin_product_price').value,
+    price: document.querySelector('#pin_product_price').value,
+    destination: document.querySelector('#pin_destination').value,
     imgBlob: pinImageBlob,
     pinSize: document.querySelector('#pin_size').value,
   };
-
-  create_pin(users_data);
+  console.log(newReview_data);
+  saveReview(newReview_data);
+  create_pin(newReview_data);
   reset_modal();
 });
 
@@ -88,13 +90,16 @@ function create_pin(pin_details) {
     new_pin.classList.add(`card_${pin_details.pinSize}`);
     new_image.classList.add('pin_max_width');
 
-    new_pin.innerHTML = `<div class="pin_title">${pin_details.brand}</div>
+    new_pin.innerHTML = `<div id="pin_title" data-brand="${newReview_data.brand}"></div>
+    <div id="pin_product_type" data-type="${newReview_data.productType}"></div>
+    <div id="pin_product_price" data-price="${newReview_data.price}"></div>
+    <div id="pin_description" data-descr="${newReview_data.description}"></div>
 <div class="pin_modal">
 
     <div class="modal_foot">
       <div class="pint_mock_icon_container">
-        <div class="destination">
-          <a href='${pin_details.destination}' target='_blank'><img
+        <div id="pin_destination" class="destination">
+          <a href='${newReview_data.destination}' target='_blank'><img
                     src='../assets/upper-right-arrow.png'
                     alt='destination'
                     class='pint_mock_icon'
@@ -124,18 +129,21 @@ function create_pin(pin_details) {
   };
 }
 
-const saveReview = async (event) => {
-  const brand = document.querySelector('#pin_title').value.trim();
-  const type = document.querySelector('#pin_product_type').value.trim();
-  const price = document.querySelector('#pin_product_price').value.trim();
-  const description = document.querySelector('#pin_description').value.trim();
-  const destination = document
-    .querySelector('#pin_product_destination')
-    .value.trim();
-  if (brand && type && price && description && destination) {
-    const response = await fetch(`/api/profile`, {
+const saveReview = async (newReview_data) => {
+  // const brand = document.querySelector('#pin_title').value.trim();
+  // const type = document.querySelector('#pin_product_type').value.trim();
+  // const price = document.querySelector('#pin_product_price').value.trim();
+  // const description = document.querySelector('#pin_description').value.trim();
+  // const link = document.querySelector('#pin_destination').value.trim();
+  const brand = newReview_data.brand;
+  const type = newReview_data.productType;
+  const price = newReview_data.price;
+  const description = newReview_data.description;
+  const link = newReview_data.destination;
+  if (brand && type && price && description && link) {
+    const response = await fetch('/api/reviews', {
       method: 'POST',
-      body: JSON.stringify({ brand, type, price, description, destination }),
+      body: JSON.stringify({ brand, type, price, description, link }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -144,7 +152,7 @@ const saveReview = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create product');
+      alert('Failed to create review');
     }
   }
 };
@@ -169,5 +177,3 @@ function reset_modal() {
   document.querySelector('#pin_size').value = '';
   pinImageBlog = null;
 }
-
-document.querySelector('.save_pin').addEventListener('submit', saveReview);
