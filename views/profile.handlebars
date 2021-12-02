@@ -5,10 +5,10 @@
 </div>
 
 
-{{#if user.reviews}}
+{{#if user.reviews.length}}
 <div class="pin_container"></div>
 
-{{#each reviews as |product|}}
+{{#each user.reviews as |product|}}
 <div class="pin_title">{{user.reviews.brand}}</div>
 <div class="pin_modal">
   <div class="modal_head">
@@ -20,7 +20,7 @@
       <div class="pint_mock_icon_container">
         <img src="../assets/upper-right-arrow.png" alt="destination" class="pint_mock_icon" />
       </div>
-      <span>{{user.reviews.destination}}</span>
+      <span>{{user.reviews.link}}</span>
     </div>
 
     <div class="pint_mock_icon_container">
