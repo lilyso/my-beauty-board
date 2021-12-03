@@ -28,7 +28,7 @@ const delCommentHandler = async (event) => {
     if (event.target.hasAttribute("data-id")) {
         const id = event.target.getAttribute("data-id");
 
-        const response = await fetch(`/api/comments/${id}`, {
+        const response = await fetch(`/api/comment/${id}`, {
             method: "DELETE",
         });
         if (response.ok) {
@@ -55,7 +55,7 @@ const updateComment = async (event) => {
     let newComment = event.target.comment.value;
     let id = event.target.id.value;
     try {
-        const response = await fetch(`/api/comments/${id}`, {
+        const response = await fetch(`/api/comment/${id}`, {
             method: "PUT",
             body: JSON.stringify({ comment: newComment }),
             headers: {
