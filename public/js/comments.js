@@ -2,11 +2,12 @@
 const newCommentHandler = async (event) => {
     event.preventDefault();
 
-    const newComment = document.querySelector("#comment").value.trim();
-    const reviewId = document.querySelector("#articleId").value;
+    const newComment = document.querySelector("#comment").value;
+    const reviewId = document.querySelector("#reviewId").value;
 
     if (newComment) {
-        const response = await fetch("/api/comments", {
+        console.log(newComment)
+        const response = await fetch("/api/comment", {
             method: "POST",
             body: JSON.stringify({ newComment, reviewId }),
             headers: {
@@ -71,9 +72,9 @@ const newCommentHandler = async (event) => {
 // };
 
 // New comment event listener
-// document
-//     .querySelector(".new-comment")
-//     .addEventListener("submit", newCommentHandler);
+document
+    .querySelector(".new-comment")
+    .addEventListener("submit", newCommentHandler);
 
 // // Delete comment event listener
 // var buttons = document.querySelectorAll(".delete-comment");
