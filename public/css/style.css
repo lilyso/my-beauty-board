@@ -97,6 +97,12 @@ a {
   width: 100%;
 }
 
+.homepage-review-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
 /* About page styles */
 
 .about-container {
@@ -139,10 +145,6 @@ a {
 
 /* End About Page Styles */
 
-.homepage-reviews-content img {
-  width: 100%;
-  height: auto;
-}
 .homepage-review-text {
   text-align: center;
   background: lavender;

@@ -1,3 +1,5 @@
+
+
 <div class='container'>
   <div class='row'>
     <div class='col-auto'>
@@ -40,15 +42,28 @@
       </div>
 
       <div class='section2'>
-        <label for='upload_img' id='upload_img_label'>
+            <!-- placeholder for uploaded image -->
+    <img  
+      id="uploadedimage" 
+      src="">
+    </img> 
+
+    <button 
+      id="upload_widget" 
+      class="cloudinary-button">
+        Upload files
+    </button>
+ 
+        <!-- <div for='upload_img' id='upload_img_label'>
           <div class='upload_img_container'>
             <div id='dotted_border'>
               <div>Click to upload</div>
             </div>
           </div>
-          <input type='file' name='upload_img' id='upload_img' />
-        </label>
-
+          <input type='file' name='upload_img' id='upload_img' />  
+        </div>   -->
+        <input type="hidden" id="c_id">
+        <input type="hidden" id="c_url">
         <div class='modals_pin'>
           <div class='pin_image'>
             <!-- <img src="" alt="pin_image"> -->
