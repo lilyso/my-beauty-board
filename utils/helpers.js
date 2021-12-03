@@ -24,7 +24,6 @@ module.exports = {
       '/johanne-kristensen-XYkc3MfT7b4-unsplash.jpg',
       '/karly-jones-jaV6cvSEqao-unsplash.jpg',
       '/laura-chouette-0uO0m798HmU-unsplash.jpg',
-      '/linh-ha-nt6KRD9im7A-unsplash.jpg',
       '/MM3_002.jpeg',
       '/MM3_019C.jpeg',
       '/nati-melnychuk-I-6Ap7JXHq8-unsplash.jpg',
@@ -32,5 +31,11 @@ module.exports = {
     ];
     getImagePath = array[Math.floor(Math.random() * array.length)];
     return getImagePath;
+  },
+  limit: (arr, limit) => {
+    if (!Array.isArray(arr)) {
+      return [];
+    }
+    return arr.slice(0, limit);
   },
 };

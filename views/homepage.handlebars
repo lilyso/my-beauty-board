@@ -3,7 +3,7 @@
 <div class='row mb-4 product'>
   <div class='col-md-5'>
     <div id='homepage-reviews'>
-      {{#each reviews as |product|}}
+      {{#each (limit reviews 8) as |product|}}
         <div class='homepage-reviews-content'>
 
           <img
