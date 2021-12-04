@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/reviews', async (req, res) => {
+router.get('/reviews', withAuth, async (req, res) => {
   try {
     // Get all reviews and JOIN with user data
     const reviewData = await Review.findAll({
