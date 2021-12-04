@@ -1,27 +1,23 @@
 <div id='homepage-reviews' class='content-container'>
+  {{#if logged_in}}
   {{#each reviews as |product|}}
-    <div class='homepage-reviews-content'>
+  <div class='homepage-reviews-content'>
 
-      <img
-        class='homepage-review-image'
-        src='../assets{{random_image}}'
-        alt='review'
-      />
-      <div class='homepage-review-text'>
-        <h2>
-          <a href='/product/{{product.id}}'>{{product.brand}}</a>
-        </h2>
-        <p>{{type}}</p>
-        <p>{{truncate_text description}}</p>
-        <p class='w3-margin-bottom'>-
-          {{user.fname}}
-          ({{format_date date_created}})</p>
-        <a
-          class='reviews-button w3-margin-top'
-          href='/review/{{id}}'
-          class='comment'
-        >Add a comment</a>
-      </div>
+    <img class='homepage-review-image' src='../assets{{random_image}}' alt='review' />
+    <div class='homepage-review-text'>
+      <h2>
+        <a href='/product/{{product.id}}'>{{product.brand}}</a>
+      </h2>
+      <p>{{type}}</p>
+      <p>{{truncate_text description}}</p>
+      <p class='w3-margin-bottom'>-
+        {{user.fname}}
+        ({{format_date date_created}})</p>
+      <a class='reviews-button w3-margin-top' href='/review/{{id}}' class='comment'>Add a comment</a>
     </div>
+  </div>
   {{/each}}
+  {{else}}
+  <p><em>Oh no, you're missing out! Click <a href="/login" style="color:blue"> here </a> to log in or sign up</em></p>
+  {{/if}}
 </div>
