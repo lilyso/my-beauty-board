@@ -129,10 +129,10 @@ router.get('/review/:id', async (req, res) => {
     const reviewData = await Review.findByPk(req.params.id, {
       include: [
         {
-          model: User, model: Comment
+          model: User,
         },
         // Comment table JOIN with User to get username
-        // { model: Comment, include: [{ model: User }] },
+        { model: Comment, include: [{ model: User }] },
       ],
     });
 

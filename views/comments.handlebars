@@ -1,17 +1,20 @@
 <input type="hidden" id="reviewId" value="{{id}}" />
 <!-- Render review -->
 <div class="content-container">
+    <img class="rounded float-start py-2 review-page-image" src="{{c_url}}"/>
     <h2>{{brand}}</h2>
-    <p>Created by {{user.fname}} on {{format_date date_created}}</p>
+    <h4>{{type}}</h4>
+    <p>By {{user.fname}} on {{format_date date_created}}</p>
     <p>{{description}}</p>
-</div>
+    <div class="border-bottom mb-4"></div>
+
 <!-- If article has comments, render comments -->
 {{#if comments.length}}
 {{#each comments as |comment|}}
 <div class="align-items-center justify-content-center mb-2">
     <div class="comment-{{comment.id}}-text">
         <p class="mb-0 comment-{{comment.id}}-p">"{{comment.comment}}" </p>
-        <p>- {{comment.user.user_name}} ({{format_date comment.date_created}})</p>
+        <p>- {{comment.user.fname}} ({{format_date comment.date_created}})</p>
     </div>
 
     <!-- Edit comment form can only be activated if user is logged in -->
@@ -43,8 +46,8 @@
                 <label for="comment">Add a comment:</label>
                 <input class="form-control mt-2" id="comment" type="text" name="comment" />
             </div>
-            <div id="submit">
-                <input type="submit" value="Submit">
+            <div  id="submit">
+                <button class="reviews-button text-center mt-4" type="submit">Submit</button>
             </div>
         </form>
     </div>
@@ -52,6 +55,7 @@
 {{else}}
 <p><em>Please log in to share, edit or delete your comment</em></p>
 {{/if}}
+</div>
 </div>
 </div>
 <script src="/js/comments.js"></script>

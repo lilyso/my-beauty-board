@@ -50,17 +50,13 @@
     {{#each (limit reviews 4) as |product|}}
       <div class='homepage-reviews-content'>
 
-        <img
-          class='homepage-review-image'
-          src='../assets{{random_image}}'
-          alt='Footer Logo'
-        />
+        <img class='homepage-review-image' src='{{c_url}}' alt='Footer Logo' />
         <div class='homepage-review-text'>
           <h2>
             <a href='/product/{{product.id}}'>{{product.brand}}</a>
           </h2>
           <p>{{type}}</p>
-          <p>{{truncate_text description}}</p>
+          <p>{{truncate_text description}}...</p>
           <p class='w3-margin-bottom'>-
             {{user.fname}}
             ({{format_date date_created}})</p>
