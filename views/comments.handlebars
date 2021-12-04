@@ -1,12 +1,12 @@
 <input type="hidden" id="reviewId" value="{{id}}" />
 <!-- Render review -->
 <div class="content-container">
-    <img class="rounded float-start py-2 review-page-image" src="{{c_url}}"/>
+    <img class="rounded float-start mb-2 review-page-image" src="{{c_url}}"/>
     <h2>{{brand}}</h2>
     <h4>{{type}}</h4>
     <p>By {{user.fname}} on {{format_date date_created}}</p>
     <p>{{description}}</p>
-    <div class="border-bottom mb-4"></div>
+    <div class="border-bottom mb-2"></div>
 
 <!-- If article has comments, render comments -->
 {{#if comments.length}}

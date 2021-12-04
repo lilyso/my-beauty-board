@@ -101,6 +101,7 @@ a {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 /* About page styles */
@@ -269,6 +270,10 @@ footer {
 .review-page-image {
   width: auto;
   max-height: 400px;
+}
+
+.user {
+  font-size: 14px;
 }
 
 .comment-link {
