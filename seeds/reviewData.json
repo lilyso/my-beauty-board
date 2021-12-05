@@ -5,38 +5,70 @@
     "description": "Very light and non greasy. I love it as my day time moisturiser. It's great that it is fragrance free and doesn't smell weird! My only issue is that the bottles are too small.",
     "price": 9.8,
     "link": "https://www.priceline.com.au/the-ordinary-natural-moisturizing-factors-ha-30-ml",
+    "c_url": "https://res.cloudinary.com/dwxel7sok/image/upload/v1638528941/beauty-board/valeriia-miller-_42NKYROG7g-unsplash_i8scee.jpg",
     "user_id": 1
   },
   {
     "brand": "The Ordinary",
     "type": "Mask",
-    "description": "Stings but skin is very smooth",
+    "description": "Stings but skin is very smooth.",
     "price": 10.8,
     "link": "https://www.priceline.com.au/the-ordinary-natural-moisturizing-factors-ha-30-ml",
+    "c_url": "https://res.cloudinary.com/dwxel7sok/image/upload/v1638528941/beauty-board/valeriia-miller-_42NKYROG7g-unsplash_i8scee.jpg",
     "user_id": 1
   },
   {
     "brand": "The Ordinary",
     "type": "Serum",
-    "description": "My skin is clearer after a month of using it",
+    "description": "My skin is clearer after a month of using it.",
     "price": 9.8,
     "link": "https://www.priceline.com.au/the-ordinary-natural-moisturizing-factors-ha-30-ml",
+    "c_url": "https://res.cloudinary.com/dwxel7sok/image/upload/v1638528941/beauty-board/valeriia-miller-_42NKYROG7g-unsplash_i8scee.jpg",
     "user_id": 1
   },
   {
     "brand": "Lesse",
     "type": "Mask",
-    "description": "Skin feels smooth and smells nice",
+    "description": "Skin feels smooth and smells nice.",
     "price": 60,
     "link": "https://lesseofficial.com/products/bioactive-mask",
+    "c_url": "https://res.cloudinary.com/dwxel7sok/image/upload/v1638528949/beauty-board/angelica-echeverry-iZlMuVu9luM-unsplash_vb2doe.jpg",
+    "user_id": 2
+  },
+  {
+    "brand": "The Inkey List",
+    "type": "Kaolin Clay Face Mask",
+    "description": "It’s very good I use this twice a week and I’ve seen a big improvement in my skin and the best thing about this is that it is so cheap.",
+    "price": 11,
+    "link": "https://lesseofficial.com/products/bioactive-mask",
+    "c_url": "https://res.cloudinary.com/dwxel7sok/image/upload/v1638612155/beauty-board/inkey-list-clay_weyf5r.webp",
     "user_id": 2
   },
   {
     "brand": "Kiels",
     "type": "Toner",
-    "description": "Refreshing but face feels dry",
+    "description": "Refreshing but face feels dry.",
     "price": 36.99,
     "link": "https://www.kiehls.com.au/category/toners/calendula-herbal-extract-alcohol-free-toner/KLKR00006.html#gclsrc=aw.ds&gclid=CjwKCAiA4veMBhAMEiwAU4XRr7TLcUEvIKu6PhR8NaudfsQMs8og9ZhDwl8kYh-XmDEN2vPwng0VoRoCFwkQAvD_BwE&start=1&cgid=face-toners",
+    "c_url": "https://res.cloudinary.com/dwxel7sok/image/upload/v1638528943/beauty-board/nati-melnychuk-I-6Ap7JXHq8-unsplash_anannz.jpg",
+    "user_id": 3
+  },
+  {
+    "brand": "CeraVe",
+    "type": "Hydrating Facial Cleanser",
+    "description": "It's gentle on skin but not sure if it works. Will update a month.",
+    "price": 16.99,
+    "link": "https://www.cerave.com.au/our-products/cleansers/hydrating-cleanser?gclsrc=aw.ds&gclid=CjwKCAiAwKyNBhBfEiwA_mrUMm76ALmx1o67JoXplxu8yilWS6EjRPhgkhPasBWcQ-xxkaKId4m2KhoCu0EQAvD_BwE",
+    "c_url": "https://res.cloudinary.com/dwxel7sok/image/upload/v1638611728/beauty-board/CeraVe_HydratingCleanser_ir1hkh.webp",
+    "user_id": 3
+  },
+  {
+    "brand": "Loreal",
+    "type": "Voluminous Lash Paradise Mascara",
+    "description": "I never got the hype of this mascara but I can appreciate a good volumizing mascara.",
+    "price": 14.99,
+    "link": "https://www.chemistwarehouse.com.au/buy/99104/l-oreal-lash-paradise-mascara-black.",
+    "c_url": "https://res.cloudinary.com/dwxel7sok/image/upload/v1638612140/beauty-board/Loreal-lash-paradise_mwudug.jpg",
     "user_id": 3
   }
 ]

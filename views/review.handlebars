@@ -1,26 +1,22 @@
-<div class='row mb-4 product'>
-  <div class='col-md-5'>
-    <div id='homepage-reviews' class='content-container'>
-      {{#each reviews as |product|}}
-      <div class='homepage-reviews-content'>
+<div id='homepage-reviews'>
+  {{!-- Users can see reviews if logged in --}}
+  {{#if logged_in}}
+  {{#each reviews as |product|}}
+  <div class='homepage-reviews-content'>
 
-        <img class='homepage-review-image' src='../assets/AYU_002.jpeg' alt='Footer Logo' />
-        <div class='homepage-review-text'>
-          <h2>
-            <a href='/product/{{product.id}}'>{{product.brand}}</a>
-          </h2>
-          <p>{{type}}</p>
-          <br>
-          <p>{{truncate_text description}}</p>
-          <br>
-          <p class='w3-margin-bottom'>-
-            {{user.fname}}
-            ({{format_date date_created}})</p>
-          <a class='reviews-button w3-margin-top' href='#review1'>See Review</a>
-        </div>
-      </div>
-      {{/each}}
+    <img class='homepage-review-image' src='{{c_url}}' alt='review' />
+    <div class='homepage-review-text'>
+      <h2>
+        <a href='/product/{{product.id}}'>{{product.brand}}</a>
+      </h2>
+      <p>{{type}}</p>
+      <p>{{truncate_text description}}...</p>
+      <p class='user mb-2'>-
+        {{user.fname}}
+        ({{format_date date_created}})</p>
+      <a class='reviews-button my-2' href='/review/{{id}}' class='comment'><button>Add a comment</button></a>
     </div>
-
   </div>
+  {{/each}}
+  {{/if}}
 </div>

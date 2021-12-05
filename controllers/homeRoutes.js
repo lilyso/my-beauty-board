@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Review, User } = require('../models');
+const { Review, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/reviews', async (req, res) => {
+router.get('/reviews', withAuth, async (req, res) => {
   try {
     // Get all reviews and JOIN with user data
     const reviewData = await Review.findAll({
@@ -52,6 +52,7 @@ router.get('/reviews', async (req, res) => {
   }
 });
 
+//Renders the about page from the homepage
 router.get('/about', async (req, res) => {
   try {
     const reviewData = await Review.findAll({
@@ -118,6 +119,36 @@ router.get('/logout', (req, res) => {
   } else {
     console.log('here');
     res.status(404).end();
+  }
+});
+
+//Able to add comments
+router.get('/review/:id', async (req, res) => {
+  console.log();
+  let userId = req.session.user_id;
+  // Get article by id and JOIN wit user and comment data
+  try {
+    const reviewData = await Review.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+        },
+        // Comment table JOIN with User to get username
+        { model: Comment, include: [{ model: User }] },
+      ],
+    });
+
+    const reviews = reviewData.get({ plain: true });
+    console.log(reviews);
+
+    res.render('comments', {
+      layout: 'beautyboard',
+      ...reviews,
+      logged_in: req.session.logged_in,
+      uid: userId,
+    });
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
