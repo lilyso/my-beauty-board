@@ -9,6 +9,7 @@ module.exports = {
     return theString;
   },
   compare: function (a, b, opts) {
+    // Compares two variables
     if (a === b) {
       return opts.fn(this);
     } else {
@@ -16,6 +17,7 @@ module.exports = {
     }
   },
   random_image: () => {
+    // Sends a random image path
     let array = [
       '/alexandra-tran-_ieSbbgr3_I-unsplash.jpg',
       '/angelica-echeverry-iZlMuVu9luM-unsplash.jpg',
@@ -36,6 +38,7 @@ module.exports = {
     if (!Array.isArray(arr)) {
       return [];
     }
-    return arr.slice(0, limit);
+    // Reverses array and limits varibles to a specific number to get the latest reviews
+    return arr.reverse().slice(0, limit);
   },
 };

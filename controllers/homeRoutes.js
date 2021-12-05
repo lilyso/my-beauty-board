@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/reviews', async (req, res) => {
+router.get('/reviews', withAuth, async (req, res) => {
   try {
     // Get all reviews and JOIN with user data
     const reviewData = await Review.findAll({
@@ -129,10 +129,10 @@ router.get('/review/:id', async (req, res) => {
     const reviewData = await Review.findByPk(req.params.id, {
       include: [
         {
-          model: User, model: Comment
+          model: User,
         },
         // Comment table JOIN with User to get username
-        // { model: Comment, include: [{ model: User }] },
+        { model: Comment, include: [{ model: User }] },
       ],
     });
 

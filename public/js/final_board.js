@@ -135,10 +135,11 @@ const saveReview = async (newReview_data) => {
   const price = newReview_data.price;
   const description = newReview_data.description;
   const link = newReview_data.destination;
-  if (brand && type && price && description && link) {
+  const c_url = newReview_data.c_link;
+  if (brand && type && price && description && link && c_url) {
     const response = await fetch('/api/reviews', {
       method: 'POST',
-      body: JSON.stringify({ brand, type, price, description, link }),
+      body: JSON.stringify({ brand, type, price, description, link, c_url }),
       headers: {
         'Content-Type': 'application/json',
       },

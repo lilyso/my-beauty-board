@@ -1,34 +1,31 @@
 <!-- Loop over each object in the products array -->
 
-<div class='row mb-4 product'>
-  <div class='col-md-5'>
-    <div id='homepage-reviews'>
-      {{#each (limit reviews 8) as |product|}}
-        <div class='homepage-reviews-content'>
+<div class='product'>
+  <div id='homepage-reviews'>
+    {{#each (limit reviews 8) as |product|}}
+      <div class='homepage-reviews-content'>
 
-          <img
-            class='homepage-review-image'
-            src='../assets{{random_image}}'
-            alt='review'
-            width='250'
-            height='250'
-          />
-          <div class='homepage-review-text'>
-            <h2 style='font-size: 25px'>
-              <a href='/product/{{product.id}}'>{{product.brand}}</a>
-            </h2>
-            <p>{{product.type}}</p>
-            <p>{{truncate_text description}}...</p>
-            <p class='w3-margin-bottom'>-
-              {{product.user.fname}}
-              ({{format_date product.date_created}})</p>
-            <a class='reviews-button w3-margin-top' href='#review1'><button
-                class='homepage-review-button'
-              >See Review</button></a>
-          </div>
+        <img
+          class='homepage-review-image'
+          src='../assets{{random_image}}'
+          alt='review'
+          width='250'
+          height='250'
+        />
+        <div class='homepage-review-text'>
+          <h2 style='font-size: 25px'>
+            <a href='/product/{{product.id}}'>{{product.brand}}</a>
+          </h2>
+          <p class='mb-2'>{{product.type}}</p>
+          <p>{{truncate_text description}}...</p>
+          <p class='mb-2 user'>-
+            {{product.user.fname}}
+            ({{format_date product.date_created}})</p>
+          <a class='reviews-button my-2' href='/review/{{id}}'><button
+              class='homepage-review-button'
+            >See Review</button></a>
         </div>
-      {{/each}}
-    </div>
-
+      </div>
+    {{/each}}
   </div>
 </div>
