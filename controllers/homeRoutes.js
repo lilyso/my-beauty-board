@@ -52,6 +52,7 @@ router.get('/reviews', withAuth, async (req, res) => {
   }
 });
 
+//Renders the about page from the homepage
 router.get('/about', async (req, res) => {
   try {
     const reviewData = await Review.findAll({
@@ -121,6 +122,7 @@ router.get('/logout', (req, res) => {
   }
 });
 
+//Able to add comments
 router.get('/review/:id', async (req, res) => {
   console.log();
   let userId = req.session.user_id;
@@ -149,33 +151,5 @@ router.get('/review/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// router.get('/comments', async (req, res) => {
-//   try {
-//     console.log("In comments")
-//     // Get all reviews and JOIN with user data
-//     const commentData = await Comment.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['fname', 'lname'],
-//         },
-//       ],
-//     });
-
-//     // Serialize data so the template can read it
-
-//     const comments = commentData.map((comment) => comment.get({ plain: true }));
-//     console.log(comments);
-//     // Pass serialized data and session flag into template
-//     res.render('comments', {
-//       layout: 'beautyboard',
-//       comments,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 module.exports = router;

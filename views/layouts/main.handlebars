@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Beauty Board - Keep track of your beauty journey here!">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="../../public/css/final_board.css">
   <link rel="stylesheet" href="../css/style.css">
   <title>Beauty Board</title>
 </head>
 
 <body>
-  <header id="header-section" >
+  <header id="header-section">
     <div class="background-image">
       <nav class="nav-bar content-container">
         <ul class="nav-links">
@@ -26,7 +26,7 @@
           <li><a href="/profile" class="beauty-board">Your Beauty Board</a></li>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-          <li><a href="logout"  id="logout">Logout</a></li>
+          <li><a href="logout" id="logout">Logout</a></li>
           {{else}}
           <li id="login"><a href="/login" class="login">Login</a></li>
           {{/if}}
@@ -67,10 +67,8 @@
     <div class="footer-box">
       <ul class="footer-links">
         <li><a href="mailto:mastroalexis@gmail.com" class="Contact">Contact</a></li>
-        <li><a href="#about" class="Github">About</a></li>
-        <li><a href="index.html">Beauty Board</a></li>
-        <li><a href="#" class="Linkedin">FAQ's</a></li>
-        <li><a href="#" class="Instagram">Social</a></li>
+        <li><a href="/about" class="about">About</a></li>
+        <li><a href="/profile">Beauty Board</a></li>
       </ul>
     </div>
   </footer>
@@ -78,7 +76,7 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-<script src="/js/about.js"></script>
+  <script src="/js/about.js"></script>
 </body>
 
 </html>
