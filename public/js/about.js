@@ -1,3 +1,4 @@
+//About page functionality
 const aboutPage = async (e) => {
   e.preventDefault();
   const response = await fetch('/api/reviews', {

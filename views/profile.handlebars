@@ -7,51 +7,81 @@
 </div>
 <div class='pin_container'>
   {{#if reviews.length}}
-    {{#each reviews as |product|}}
-      <div class='card card_small'>
-        <div id='pin_title{{product.id}}' data-brand='{{product.brand}}'></div>
-        <div
-          id='pin_product_type{{product.id}}'
-          data-type='{{product.type}}'
-        ></div>
-        <div
-          id='pin_product_price{{product.id}}'
-          data-price='{{product.price}}'
-        ></div>
-        <div
-          id='pin_description{{product.id}}'
-          data-descr='{{product.description}}'
-        ></div>
-        <div class='pin_modal'>
-          <div class='modal_foot'>
-            <div class='destination'>
-              <div class='pint_mock_icon_container'>
-                <div>
-                  <a href='{{product.link}}' target='_blank'><img
-                      src='../assets/upper-right-arrow.png'
-                      alt='destination'
-                      class='pint_mock_icon'
-                      id='pint_mock_icon'
-                    /></a>
-                </div>
+  {{#each reviews as |product|}}
+  <div class='card card_small'>
+    <div id='pin_title{{product.id}}' data-brand='{{product.brand}}'></div>
+    <div id='pin_product_type{{product.id}}' data-type='{{product.type}}'></div>
+    <div id='pin_product_price{{product.id}}' data-price='{{product.price}}'></div>
+    <div id='pin_description{{product.id}}' data-descr='{{product.description}}'></div>
+    <div class='pin_modal'>
+      <div class='modal_foot'>
+        <!-- Button trigger modal -->
+        <button type="button" class="modal-read-more-btn" data-bs-toggle="modal"
+          data-bs-target="#product-{{product.id}}">
+          See Review
+        </button>
+
+        <div class='destination'>
+          <div class='pint_mock_icon_container'>
+            <div>
+              <a href='{{product.link}}' target='_blank'><img src='../assets/upper-right-arrow.png' alt='destination'
+                  class='pint_mock_icon' id="pint_mock_icon" /></a>
+              <div>
               </div>
             </div>
 
           </div>
         </div>
-        <div class='pin_image'><img src='{{c_url}}' class='pin_max_width' />
+      </div>
+      <div class='pin_image'><img src='/assets/Landing-page.jpg' class='pin_max_height' />
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="product-{{product.id}}" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">{{product.brand}}</h5>
+        </div>
+        <div class="modal-body">
+          <div class='modal-pin-image'><img src='/assets/Landing-page.jpg' id='modal-pin-image' />
+          </div>
+          <div id='pin_description{{product.id}}'>
+            <p class="modal-type">{{product.type}}</p>
+            <p class="modal-desc">{{product.description}}</p>
+            <p class="modal-price">${{product.price}}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
+    <div class='pin_image'><img src='{{c_url}}' class='pin_max_width' />
+    </div>
     {{/each}}
-  {{/if}}
-</div>
+    {{/if}}
+  </div>
 
-<div class='add_pin_modal'>
-  <div class='add_pin_container'>
-    <div class='side' id='left_side'>
-      <div class='section1'>
-      </div>
+  <div class='add_pin_modal'>
+    <div class='add_pin_container'>
+      <div class='side' id='left_side'>
+        <div class='section1'>
+        </div>
+        <div class='section2'>
+          <label for='upload_img' id='upload_img_label'>
+            <div class='upload_img_container'>
+              <div id='dotted_border'>
+                <div>Click to upload</div>
+              </div>
+            </div>
+            <input type='file' name='upload_img' id='upload_img' />
+          </label>
 
+          <div class='modals_pin'>
+            <div class='pin_image'>
+              <!-- <img src="" alt="pin_image"> -->
+            </div>
       <div class='section2'>
         <!-- placeholder for uploaded image -->
 
@@ -76,58 +106,33 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class='section1'>
-      <div class='select_size'>
-        <select name='pin_size' id='pin_size'>
-          <option value='Select Size' disabled select>Select Size</option>
-          <option value='small'>small</option>
-          <option value='medium'>medium</option>
-          <option value='large'>large</option>
-        </select>
+      <div class='section1'>
+        <div class='select_size'>
+          <select name='pin_size' id='pin_size'>
+            <option value='Select Size' disabled select>Select Size</option>
+            <option value='small'>small</option>
+            <option value='medium'>medium</option>
+            <option value='large'>large</option>
+          </select>
+        </div>
+        <div class='save_pin'>Save</div>
+
       </div>
-      <div class='save_pin'>Save</div>
 
-    </div>
+      <div class='side' id='right_side'>
 
-    <div class='side' id='right_side'>
-
-      <div class='section2'>
-        <input
-          placeholder='Brand'
-          type='text'
-          class='new_pin_input'
-          id='pin_title'
-        />
-        <input
-          placeholder='Product Type'
-          type='text'
-          class='new_pin_input'
-          id='pin_product_type'
-        />
-        <input
-          placeholder='Description'
-          type='text'
-          class='new_pin_input'
-          id='pin_description'
-        />
-        <input
-          placeholder='Price'
-          type='text'
-          class='new_pin_input'
-          id='pin_product_price'
-        />
-        <input
-          placeholder='Add Product Link'
-          type='text'
-          class='new_pin_input'
-          id='pin_destination'
-        />
+        <div class='section2'>
+          <input placeholder='Brand' type='text' class='new_pin_input' id='pin_title' />
+          <input placeholder='Product Type' type='text' class='new_pin_input' id='pin_product_type' />
+          <input placeholder='Description' type='text' class='new_pin_input' id='pin_description' />
+          <input placeholder='Price' type='text' class='new_pin_input' id='pin_product_price' />
+          <input placeholder='Add Product Link' type='text' class='new_pin_input' id='pin_destination' />
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class='pint_mock_icon_container add_pin'>
-  <img src='../assets/add.png' alt='add_pin' class='pint_mock_icon' />
-</div>
+  </div>
+
+  <div class='pint_mock_icon_container add_pin'>
+    <img src='../assets/add.png' alt='add_pin' class='pint_mock_icon' />
