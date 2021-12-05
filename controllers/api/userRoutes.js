@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-//Loggin in user
+//Login in user
 router.post('/login', async (req, res) => {
   console.log('this login');
   try {
@@ -55,7 +55,6 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
 
 //Logout user
 router.post('/logout', (req, res) => {
