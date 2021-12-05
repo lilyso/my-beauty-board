@@ -34,6 +34,10 @@ Review.init(
       type: DataTypes.STRING,
       validate: { isUrl: true },
     },
+    c_url: {
+      type: DataTypes.STRING,
+      validate: { isUrl: true },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

@@ -52,6 +52,7 @@ router.post('/', withAuth, async (req, res) => {
       price: req.body.price,
       description: req.body.description,
       link: req.body.link,
+      c_url: req.body.link,
     });
     res.status(200).json(newReview);
   } catch (err) {

@@ -15,6 +15,7 @@ html {
   background-color: rgb(255, 254, 251);
 }
 
+/* Homepage page styles */
 #header-section {
   background-image: linear-gradient(to top, transparent, white),
     url(/assets/johanne-kristensen-XYkc3MfT7b4-unsplash.jpg);
@@ -80,21 +81,80 @@ a {
 .content-container {
   padding: 20px;
   width: 100%;
-  max-width: 1100px;
   margin: 0px auto 0px auto;
 }
 
 #homepage-reviews {
   display: flex;
-    text-align: -webkit-center;
-    flex-direction: row;
-    justify-content: center;
+  flex-wrap: wrap;
+  text-align: -webkit-center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .homepage-reviews-content {
   padding: 20px;
   width: 100%;
 }
+
+.homepage-review-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.homepage-review-text {
+  text-align: center;
+  background: lavender;
+  padding: 16px;
+  font-family: sans-serif;
+  font-weight: 200;
+}
+.see-all-reviews-feature-img {
+  margin-left: -0px;
+  width: 500px;
+}
+
+#see-all-reviews {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.see-all-reviews-text {
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  z-index: 1;
+  line-height: 1;
+  width: 600px;
+  line-height: 25px;
+}
+
+.reviews-feature-img {
+  height: 450px;
+  background: url(../assets/mask+hair.jpeg) no-repeat center / cover;
+  border-radius: 40px;
+  border: 0.03px solid rgb(94, 94, 94);
+  transform: rotate(-3deg);
+}
+
+.reviews-feature-img:hover {
+  border-radius: 500px / 500px;
+}
+
+.reviews-text {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 200;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+
+/* End Homepage page styles */
 
 /* About page styles */
 
@@ -129,7 +189,8 @@ a {
 
 .about-img2 {
   height: 450px;
-  background: url(/assets/valerie-elash-pG4VMPudxNM-unsplash.jpg) no-repeat center / cover;
+  background: url(/assets/valerie-elash-pG4VMPudxNM-unsplash.jpg) no-repeat
+    center / cover;
   border-radius: 40px;
   border: 0.03px solid rgb(94, 94, 94);
   transform: rotate(3deg);
@@ -137,17 +198,8 @@ a {
 
 /* End About Page Styles */
 
-.homepage-reviews-content img {
-  width: 100%;
-  height: auto;
-}
-.homepage-review-text {
-  text-align: center;
-  background: lavender;
-  padding: 16px;
-  font-family: sans-serif;
-  font-weight: 200;
-}
+/* Reviews page styles */
+
 
 .reviews-button {
   padding: 9px 18px;
@@ -175,53 +227,11 @@ button {
   font-family: 'Didot';
 }
 
-#see-all-reviews {
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .container {
-  margin: 20px;
   padding: 20px;
 }
 
-.see-all-reviews-text {
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  z-index: 1;
-  line-height: 1;
-  width: 600px;
-  line-height: 25px;
-}
-
-.reviews-text {
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: 200;
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-
-.see-all-reviews-feature-img {
-  margin-left: -0px;
-  width: 500px;
-}
-
-.reviews-feature-img {
-  height: 450px;
-  background: url(../assets/mask+hair.jpeg) no-repeat center / cover;
-  border-radius: 40px;
-  border: 0.03px solid rgb(94, 94, 94);
-  transform: rotate(-3deg);
-}
-
-.reviews-feature-img:hover {
-  border-radius: 500px / 500px;
-}
+/* Footer link styles */
 
 footer {
   width: auto;
@@ -253,9 +263,14 @@ footer {
   display: inline-block;
 }
 
+/* End Footer link styles */
+
+
 .username-heading {
   text-align: center;
 }
+
+/* Beuaty Board & modal pop up styles */
 
 #pint_mock_icon {
   margin-left: 7px;
@@ -292,16 +307,29 @@ footer {
     margin: 30px;
 }
 
-.modal-price, .modal-type{
+.modal-price, .modal-type {
   margin: 20px;
   font-size: 15px;
   text-align: center;
 }
 
-.btn-secondary {
-  margin-top: 10px;
+/* Beuaty Board & modal pop up styles */
+
+/* Review page styes */
+.review-page-image {
+  width: auto;
+  max-height: 400px;
 }
 
+.user {
+  font-size: 14px;
+}
+
+.comment-link {
+ color: rgb(255, 179, 179);
+ text-decoration: underline;
+}
+/* Review page styes end */
 
 @media screen and (min-width: 768px) {
   .homepage-reviews-content {
@@ -351,18 +379,11 @@ footer {
 @media screen and (max-width: 900px) {
   #homepage-reviews {
     display: flex;
-      text-align: -webkit-center;
-      flex-direction: column;
-      justify-content: center;
+    text-align: -webkit-center;
+    flex-direction: column;
+    justify-content: center;
   }
-  
-  .homepage-reviews-content {
-    padding: 20px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
+
 }
 
 @media screen and (max-width: 600px) {
@@ -373,6 +394,5 @@ footer {
 
   .homepage-review-text {
     font-size: 12px;
-
-}
+  }
 }
