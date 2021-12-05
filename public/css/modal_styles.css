@@ -202,3 +202,11 @@
   max-width: 30px;
   height: auto;
 }
+
+#uploadedimage {
+  display: none;
+  max-width: 200px;
+  height: auto;
+  max-height: 200px;
+  width: auto;
+}
