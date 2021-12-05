@@ -23,7 +23,7 @@ const sess = {
     // Check active user every hour
     checkExpirationInterval: 60 * 60 * 1000,
     // Session expires after 4 hours
-    expiration: 60 * 60 * 1000,
+    expiration: 4 * 60 * 60 * 1000,
   }),
 };
 
