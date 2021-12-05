@@ -146,7 +146,7 @@ const saveReview = async (newReview_data) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      res.json(response);
     } else {
       alert('Failed to create review');
     }

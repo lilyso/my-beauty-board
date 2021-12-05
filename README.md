@@ -35,6 +35,7 @@ The Beauty Industry is growing every day with new, high-quality products for eve
 - Sequelize
 - Bcrypt
 - Dotenv
+- Cloudinary
 
 ## Features
 
@@ -46,6 +47,8 @@ The Beauty Industry is growing every day with new, high-quality products for eve
 ![Example screenshot](./img/screenshot.png)
 
 ## Setup
+
+This project requires a Cloudinary acccount for the images to be saved and rendered with the widget. Refer to the [Cloudinary](https://cloudinary.com/documentation/upload_widget#crop_and_folder) documentation for more info. 
 
 This project requires Node.js and MySQL to be installed.
 
@@ -118,6 +121,7 @@ To do:
 - Profile and featured pin boards to share a regime
 - Share button for reviews/products
 - Add rating system
+- Add tags to new review form so that reviews can be grouped together for the same product
 
 
 ## Acknowledgements
