@@ -1,4 +1,3 @@
-
 .add_pin_modal {
   width: 100%;
   height: 100%;
@@ -31,6 +30,13 @@
 }
 
 .pint_mock_icon_container {
+  /* width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; */
   position: fixed;
   right: 5%;
   bottom: 5%;
@@ -45,6 +51,8 @@
 .section1 {
   width: 100%;
   height: 8%;
+
+  /* background-color: purple; */
 }
 
 .section2 {
@@ -55,6 +63,7 @@
   justify-content: center;
   align-items: center;
 
+  /* background-color: aquamarine; */
 }
 
 .section3 {
@@ -63,6 +72,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* background-color: firebrick; */
 }
 
 #left_side .section1 .pint_mock_icon_container {
@@ -139,20 +150,25 @@
 }
 
 .pin_image {
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
+
+/* .pin_image img {
+  max-height: 100%;
+} */
+
 .pin_max_width {
   max-width: 100%;
 }
-
 .pin_max_height {
   height: 235px;
 }
-
+  
 .select_size select {
   border: none;
   border-top-left-radius: 8px;
@@ -198,3 +214,10 @@
   background-color: transparent;
 }
 
+/* @media screen and (max-width: 400px) {
+  .side {
+    width: 100%;
+  }
+  .upload_img_container {
+  }
+} */

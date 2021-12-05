@@ -275,7 +275,6 @@ footer {
 #pint_mock_icon {
   margin-left: 7px;
 }
-
 .modal-read-more-btn{
   padding: 6px;
   margin-bottom: 17px;
@@ -314,6 +313,16 @@ footer {
 }
 
 /* Beuaty Board & modal pop up styles */
+
+/* Review page styes */
+.review-page-image {
+  width: auto;
+  max-height: 400px;
+}
+
+.user {
+  font-size: 14px;
+}
 
 /* Review page styes */
 .review-page-image {
