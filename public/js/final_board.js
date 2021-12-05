@@ -1,5 +1,6 @@
 let newReview_data = {};
 const add_pin_modal = document.querySelector('.add_pin_modal');
+const readMoreButton = document.querySelector('.modal-read-more-btn');
 
 document.querySelector('.add_pin').addEventListener('click', () => {
   add_pin_modal.style.opacity = 1;
@@ -152,6 +153,11 @@ const saveReview = async (newReview_data) => {
     }
   }
 };
+
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+})
+
 
 function reset_modal() {
   const modals_pin = document.querySelector('.add_pin_modal .modals_pin');

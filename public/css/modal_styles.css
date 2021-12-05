@@ -150,10 +150,13 @@
 }
 
 .pin_image {
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;gi
+  align-items: center;
 }
+
+
 
 /* .pin_image img {
   max-height: 100%;
@@ -162,11 +165,9 @@
 .pin_max_width {
   max-width: 100%;
 }
-
-.pin_max_width {
-  max-width: 100%;
-}
-
+.pin_max_height {
+  height: 235px;
+  
 .select_size select {
   border: none;
   border-top-left-radius: 8px;
