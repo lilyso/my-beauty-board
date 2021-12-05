@@ -13,12 +13,6 @@ document.querySelector('.add_pin_modal').addEventListener('click', (event) => {
     }
 });
 
-document.querySelector('.modal-read-more-btn').addEventListener('click', (event) => {
-    if (event.target === readMoreButton) {
-        reset_modal();
-    }
-});
-
 let pinImageBlob = null;
 
 document.querySelector('#upload_img').addEventListener('change', (event) => {
@@ -158,37 +152,6 @@ const saveReview = async (newReview_data) => {
         }
     }
 };
-
-// let data = {
-//     productReview: [
-//         {
-//             title: "Hello",
-//             description: "Hello Text",
-//             image: "https://via.placeholder.com/300x100",
-//         },
-//         {
-//             title: "Card title",
-//             description: "Some quick example text to build on the card title and make up the bulk of the card's content.<p>Another paragraph</p><p>Another paragraph</p>",
-//             image: "https://via.placeholder.com/300x100",
-//         }
-//     ]
-// };
-
-// let source = document.getElementsByClassName("card_small").innerHTML;
-// let template = Handlebars.compile(source);
-// let html = template(data);
-
-// document.getElementsByClassName("pin_container").innerHTML = html;
-// console.log(html);
-
-// //jquery method
-// $(".pin_container .card-footer .modal-read-more-btn").on("click", function (event) {
-//     console.log("jquery");
-
-//     let index = $(".card_small").index(event.currentTarget);
-//     console.log("index = " + index);
-//     console.log(event.target.dataset.target);
-// });
 
 $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')

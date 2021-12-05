@@ -16,7 +16,8 @@
     <div class='pin_modal'>
       <div class='modal_foot'>
         <!-- Button trigger modal -->
-        <button type="button" class="modal-read-more-btn" data-toggle="modal" data-target="#product-{{product.id}}">
+        <button type="button" class="modal-read-more-btn" data-bs-toggle="modal"
+          data-bs-target="#product-{{product.id}}">
           See Review
         </button>
 
@@ -32,23 +33,30 @@
         </div>
 
       </div>
+      <div class='pin_image'><img src='/assets/Landing-page.jpg' class='pin_max_height' />
+      </div>
     </div>
-    <div class="modal fade" id="product-{{product.id}}" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">{{product.brand}}</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+  </div>
+  <div class="modal fade" id="product-{{product.id}}" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">{{product.brand}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class='modal-pin-image'><img src='/assets/Landing-page.jpg' id='modal-pin-image' />
           </div>
-          <div class="modal-body">
-            ...
+          <div id='pin_description{{product.id}}'>
+            <p class="modal-type">{{product.type}}</p>
+            <p class="modal-desc">{{product.description}}</p>
+            <p class="modal-price">${{product.price}}</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>

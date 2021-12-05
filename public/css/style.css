@@ -270,6 +270,34 @@ footer {
   border-radius: 10px;
 }
 
+.modal-content {
+  height: 680px;
+}
+
+.modal-body {
+  flex: none;
+}
+
+.modal-pin-image {
+  height: 325px;
+  width: 400px
+  margin-left: 8px;
+}
+
+
+.modal-desc {
+  font-size: 12px;
+    text-align: center;
+    margin: 30px;
+}
+
+.modal-price, .modal-type{
+  margin: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+
 
 @media screen and (min-width: 768px) {
   .homepage-reviews-content {
@@ -342,4 +370,5 @@ footer {
   .homepage-review-text {
     font-size: 12px;
 
+}
 }
