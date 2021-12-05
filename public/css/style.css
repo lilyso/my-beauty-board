@@ -278,10 +278,11 @@ footer {
   flex: none;
 }
 
-.modal-pin-image {
+#modal-pin-image {
   height: 325px;
-  width: 400px
-  margin-left: 8px;
+  width: 455px;
+  margin-left: 5px;
+  margin-top: 10px;
 }
 
 
@@ -297,6 +298,9 @@ footer {
   text-align: center;
 }
 
+.btn-secondary {
+  margin-top: 20px;
+}
 
 
 @media screen and (min-width: 768px) {
