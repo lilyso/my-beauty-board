@@ -40,7 +40,6 @@ router.get('/reviews', withAuth, async (req, res) => {
     // Serialize data so the template can read it
 
     const reviews = reviewData.map((review) => review.get({ plain: true }));
-    console.log(reviews);
     // Pass serialized data and session flag into template
     res.render('review', {
       layout: 'beautyboard',
@@ -65,7 +64,6 @@ router.get('/about', async (req, res) => {
     });
 
     const reviews = reviewData.map((review) => review.get({ plain: true }));
-    console.log(reviews);
 
     res.render('about', {
       layout: 'beautyboard',
@@ -85,9 +83,7 @@ router.get('/profile', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: Review }],
     });
-    // res.json(userData);
     const user = userData.get({ plain: true });
-    console.log(user);
     res.render('profile', {
       layout: 'beautyboard',
       ...user,
@@ -111,20 +107,17 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
-  console.log('Hello');
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
   } else {
-    console.log('here');
     res.status(404).end();
   }
 });
 
 //Able to add comments
 router.get('/review/:id', async (req, res) => {
-  console.log();
   let userId = req.session.user_id;
   // Get article by id and JOIN wit user and comment data
   try {
@@ -139,7 +132,6 @@ router.get('/review/:id', async (req, res) => {
     });
 
     const reviews = reviewData.get({ plain: true });
-    console.log(reviews);
 
     res.render('comments', {
       layout: 'beautyboard',

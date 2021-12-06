@@ -4,67 +4,65 @@ const withAuth = require('../../utils/auth');
 
 //Get all comments (passed)
 router.get('/', (req, res) => {
-    Comment.findAll({
-        include: [{
-            model: Review
-        }]
-    }).then(data => {
-        console.log(data);
-        res.json(data)
-    })
+  Comment.findAll({
+    include: [
+      {
+        model: Review,
+      },
+    ],
+  }).then((data) => {
+    res.json(data);
+  });
 });
 
 //find a single comment by id (passed)
 router.get('/:id', (req, res) => {
-    Comment.findByPk(req.params.id, {
-        include: [{
-            model: Review
-        }]
-    }).then(data => {
-        console.log(data);
-        res.json(data)
-    })
+  Comment.findByPk(req.params.id, {
+    include: [
+      {
+        model: Review,
+      },
+    ],
+  }).then((data) => {
+    res.json(data);
+  });
 });
 
 //Create a comment (passed)
 router.post('/', async (req, res) => {
-    try {
-        const newComment = await Comment.create({
-            comment: req.body.newComment,
-            review_id: req.body.reviewId,
-            user_id: req.session.user_id
-        });
+  try {
+    const newComment = await Comment.create({
+      comment: req.body.newComment,
+      review_id: req.body.reviewId,
+      user_id: req.session.user_id,
+    });
 
-        res.status(200).json(newComment);
-    } catch (err) {
-        res.status(400).json(err);
-    }
+    res.status(200).json(newComment);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 //Update a comment (passed)
 router.put('/:id', (req, res) => {
-    Comment.update(req.body, {
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(data => {
-            console.log(data);
-            res.json(data)
-        })
+  Comment.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+  }).then((data) => {
+    res.json(data);
+  });
 });
 
-// Delete a comment by id 
+// Delete a comment by id
 router.delete('/:id', (req, res) => {
-    Comment.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(data => {
-            console.log(data);
-            res.json(data)
-        })
+  Comment.destroy({
+    where: {
+      id: req.params.id,
+    },
+  }).then((data) => {
+    res.json(data);
+  });
 });
 
 module.exports = router;

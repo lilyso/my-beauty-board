@@ -22,7 +22,6 @@ document.querySelector('.save_pin').addEventListener('click', () => {
     destination: document.querySelector('#pin_destination').value,
     c_link: document.querySelector('#c_link').value,
   };
-  console.log(newReview_data);
   saveReview(newReview_data);
   reset_modal();
 });

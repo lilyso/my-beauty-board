@@ -5,7 +5,6 @@ const aboutPage = async (e) => {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
   });
-  console.log('res', response);
   if (response.ok) {
     document.location.replace('/about');
   } else {
