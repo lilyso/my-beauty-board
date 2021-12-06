@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
       },
     ],
   }).then((data) => {
-    console.log(data);
     res.json(data);
   });
 });
@@ -25,7 +24,6 @@ router.get('/:id', (req, res) => {
       },
     ],
   }).then((data) => {
-    console.log(data);
     res.json(data);
   });
 });
@@ -37,7 +35,6 @@ router.put('/:id', (req, res) => {
       id: req.params.id,
     },
   }).then((data) => {
-    console.log(data);
     res.json(data);
   });
 });
@@ -67,21 +64,8 @@ router.delete('/:id', (req, res) => {
       id: req.params.id,
     },
   }).then((data) => {
-    console.log(data);
     res.json(data);
   });
 });
 
 module.exports = router;
-
-//Create a review
-// router.post('/', (req, res) => {
-//   Review.create({
-//     where: {
-//       user_id: req.session.user_id
-//     },
-//   }).then((data) => {
-//     console.log(data);
-//     res.json(data);
-//   });
-// });

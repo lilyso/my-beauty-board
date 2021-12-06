@@ -1,7 +1,7 @@
 <div id='homepage-reviews'>
   {{! Users can see reviews if logged in }}
   {{#if logged_in}}
-    {{#each reviews}}
+    {{#each (latest reviews)}}
       <div class='homepage-reviews-content'>
 
         <img class='homepage-review-image' src='{{c_url}}' alt='review' />

@@ -41,4 +41,8 @@ module.exports = {
     // Reverses array and limits varibles to a specific number to get the latest reviews
     return arr.reverse().slice(0, limit);
   },
+  latest: (arr) => {
+    // Reverses array to get the latest reviews
+    return arr.reverse();
+  },
 };
