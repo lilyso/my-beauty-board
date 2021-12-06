@@ -1,13 +1,13 @@
 <div id='homepage-reviews'>
   {{! Users can see reviews if logged in }}
   {{#if logged_in}}
-    {{#each reviews as |product|}}
+    {{#each reviews}}
       <div class='homepage-reviews-content'>
 
         <img class='homepage-review-image' src='{{c_url}}' alt='review' />
         <div class='homepage-review-text'>
           <h2>
-            <a href='/product/{{product.id}}'>{{product.brand}}</a>
+            <a href='/product/{{id}}'>{{brand}}</a>
           </h2>
           <p>{{type}}</p>
           <p>{{truncate_text description}}...</p>

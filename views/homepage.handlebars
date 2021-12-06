@@ -2,24 +2,24 @@
 
 <div class='product'>
   <div id='homepage-reviews'>
-    {{#each (limit reviews 8) as |product|}}
+    {{#each (limit reviews 8)}}
       <div class='homepage-reviews-content'>
 
         <img
           class='homepage-review-image'
-          src='../assets{{product.c_url}}'
+          src='../assets{{c_url}}'
           alt='review'
           width='250'
           height='250'
         />
         <div class='homepage-review-text'>
           <h2 style='font-size: 25px'>
-            <a href='/product/{{product.id}}'>{{product.brand}}</a>
+            <a href='/product/{{id}}'>{{brand}}</a>
           </h2>
-          <p class='mb-2'>{{product.type}}</p>
+          <p class='mb-2'>{{type}}</p>
           <p>{{truncate_text description}}...</p>
           <p class='mb-2 user'>-
-            {{product.user.fname}}
+            {{user.fname}}
             ({{format_date product.date_created}})</p>
           <a class='reviews-button my-2' href='/review/{{id}}'><button
               class='homepage-review-button'
