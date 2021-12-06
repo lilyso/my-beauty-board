@@ -400,10 +400,3 @@ footer {
     font-size: 12px;
   }
 }
-#uploadedimage {
-  display: none;
-  max-width: 200px;
-  height: auto;
-  max-height: 200px;
-  width: auto;
-}
