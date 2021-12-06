@@ -14,7 +14,6 @@ const loginFormHandler = async (event) => {
     });
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      //
       setTimeout(() => {
         document.location.replace('/profile');
       }, 500);
@@ -23,6 +22,8 @@ const loginFormHandler = async (event) => {
     }
   }
 };
+
+// New user post request
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
@@ -42,7 +43,7 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      // alert(response.statusText);
+      console.log(response.statusText);
     }
   }
 };

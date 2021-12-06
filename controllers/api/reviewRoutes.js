@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
   });
 });
 
-//find a single review by id
+// Find a single review by id
 router.get('/:id', (req, res) => {
   Review.findByPk(req.params.id, {
     include: [
@@ -28,7 +28,7 @@ router.get('/:id', (req, res) => {
   });
 });
 
-//Update a review by id
+// Update a review by id
 router.put('/:id', (req, res) => {
   Review.update(req.body, {
     where: {
@@ -39,7 +39,7 @@ router.put('/:id', (req, res) => {
   });
 });
 
-//add a review
+// Add a review
 router.post('/', withAuth, async (req, res) => {
   try {
     const newReview = await Review.create({
@@ -57,7 +57,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-//delete a review
+// Delete a review
 router.delete('/:id', (req, res) => {
   Review.destroy({
     where: {

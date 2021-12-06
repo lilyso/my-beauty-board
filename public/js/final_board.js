@@ -13,6 +13,7 @@ document.querySelector('.add_pin_modal').addEventListener('click', (event) => {
   }
 });
 
+// dSave form input in object
 document.querySelector('.save_pin').addEventListener('click', () => {
   newReview_data = {
     brand: document.querySelector('#pin_title').value,
@@ -26,6 +27,7 @@ document.querySelector('.save_pin').addEventListener('click', () => {
   reset_modal();
 });
 
+// Post request for new review
 const saveReview = async (newReview_data) => {
   const brand = newReview_data.brand;
   const type = newReview_data.productType;
@@ -54,6 +56,7 @@ $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus');
 });
 
+// Rest modal when form is submitted
 function reset_modal() {
   const modals_pin = document.querySelector('.add_pin_modal .modals_pin');
 

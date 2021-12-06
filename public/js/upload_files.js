@@ -4,6 +4,8 @@ const uploadPreset = 'r5e8hao3';
 const myWidget = cloudinary.createUploadWidget(
   {
     cloudName: cloudName,
+    // Cloudinary upload
+
     uploadPreset: uploadPreset,
     // cropping: true, //add a cropping step
     // showAdvancedOptions: true,  //add advanced options (public_id and tag)
@@ -24,7 +26,7 @@ const myWidget = cloudinary.createUploadWidget(
       document
         .getElementById('uploadedimage')
         .setAttribute('src', result.info.secure_url);
-
+      // Inject cloudinary link into file
       document.getElementById('uploadedimage').style.display = 'inline';
 
       document.getElementById('c_link').value = result.info.secure_url;

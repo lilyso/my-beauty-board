@@ -1,3 +1,4 @@
+// Log out request
 const logout = async (e) => {
   e.preventDefault();
   const response = await fetch('/api/users/logout', {

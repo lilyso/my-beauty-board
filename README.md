@@ -41,10 +41,15 @@ The Beauty Industry is growing every day with new, high-quality products for eve
 
 - Save details of beauty products used in user's dashboard
 - Reviews are added to public reviews page and can only be accessed if logged in
+- Users can add comments if logged in
 
 ## Screenshots
 
-![Example screenshot](./img/screenshot.png)
+![Beauty Board Home](public/assets/readme/beauty-board-home.png)
+![Beauty Board About](public/assets/readme/beauty-board-about.png)
+![Beauty Board Login](public/assets/readme/beauty-board-login.png)
+![Beauty Board Profile](public/assets/readme/beauty-board-profile.png)
+![Beauty Board Reviews](public/assets/readme/beauty-board-reviews.png)
 
 ## Setup
 
@@ -116,6 +121,7 @@ Room for improvement:
 
 To do:
 
+- Ability to update and delete pins
 - Add blog section for featured reviews/writers/influencers
 - Add form to add user's skin type, level and preference to be displayed in their dashboard/profile
 - Profile and featured pin boards to share a regime
