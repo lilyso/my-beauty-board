@@ -51,6 +51,7 @@ a {
   font-family: 'Didot', serif;
   align-items: center;
   font-size: 17px;
+  padding-left: 0;
 }
 
 .nav-links li {
@@ -153,7 +154,6 @@ a {
   padding-bottom: 20px;
 }
 
-
 /* End Homepage page styles */
 
 /* About page styles */
@@ -199,7 +199,6 @@ a {
 /* End About Page Styles */
 
 /* Reviews page styles */
-
 
 .reviews-button {
   padding: 9px 18px;
@@ -265,7 +264,6 @@ footer {
 
 /* End Footer link styles */
 
-
 .username-heading {
   text-align: center;
 }
@@ -275,7 +273,7 @@ footer {
 #pint_mock_icon {
   margin-left: 7px;
 }
-.modal-read-more-btn{
+.modal-read-more-btn {
   padding: 6px;
   margin-bottom: 17px;
   margin-right: 119px;
@@ -293,20 +291,18 @@ footer {
 }
 
 #modal-pin-image {
-  height: 325px;
-  width: 455px;
-  margin-left: 5px;
-  margin-top: 10px;
+  max-height: 300px;
+  max-width: 300px;
 }
-
 
 .modal-desc {
   font-size: 12px;
-    text-align: center;
-    margin: 30px;
+  text-align: center;
+  margin: 30px;
 }
 
-.modal-price, .modal-type {
+.modal-price,
+.modal-type {
   margin: 20px;
   font-size: 15px;
   text-align: center;
@@ -321,7 +317,7 @@ footer {
 }
 
 .user {
-  font-size: 14px;
+  font-size: 90%;
 }
 
 /* Review page styes */
@@ -335,8 +331,8 @@ footer {
 }
 
 .comment-link {
- color: rgb(255, 179, 179);
- text-decoration: underline;
+  color: rgb(255, 179, 179);
+  text-decoration: underline;
 }
 /* Review page styes end */
 
@@ -392,7 +388,6 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -404,4 +399,11 @@ footer {
   .homepage-review-text {
     font-size: 12px;
   }
+}
+#uploadedimage {
+  display: none;
+  max-width: 200px;
+  height: auto;
+  max-height: 200px;
+  width: auto;
 }

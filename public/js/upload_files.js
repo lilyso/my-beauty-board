@@ -1,5 +1,5 @@
-const cloudName = 'dwxel7sok'; // replace with your own cloud name
-const uploadPreset = 'r5e8hao3'; // replace with your own upload preset
+const cloudName = 'dwxel7sok';
+const uploadPreset = 'r5e8hao3';
 
 const myWidget = cloudinary.createUploadWidget(
   {
@@ -15,7 +15,7 @@ const myWidget = cloudinary.createUploadWidget(
     // clientAllowedFormats: ['images'], //restrict uploading to image files only
     // maxImageFileSize: 2000000,  //restrict file size to less than 2MB
     maxImageWidth: 1000, //Scales the image down to a width of 2000 pixels before uploading
-    // theme: "purple", //change to a purple theme
+    // theme: 'purple', //change to a purple theme
   },
   (error, result) => {
     if (!error && result && result.event === 'success') {
@@ -25,9 +25,9 @@ const myWidget = cloudinary.createUploadWidget(
         .getElementById('uploadedimage')
         .setAttribute('src', result.info.secure_url);
 
-      document.getElementById('c_url').value = result.info.secure_url;
+      document.getElementById('uploadedimage').style.display = 'inline';
 
-      document.getElementById('c_id').value = result.info.asset_id;
+      document.getElementById('c_link').value = result.info.secure_url;
     }
   }
 );
