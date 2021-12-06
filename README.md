@@ -1,7 +1,7 @@
 # My Beauty Board
 
 > Beauty Board is a pinterest style website where users can build their own personal board to keep track of beauty products they use and share their experience with other users.
-> Live demo [COMING SOON](https://www.example.com). 
+> Live demo [_HERE_](https://mighty-reef-26126.herokuapp.com/). 
 
 ## Table of Contents
 
