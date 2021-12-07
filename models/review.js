@@ -33,6 +33,7 @@ Review.init(
     link: {
       type: DataTypes.STRING,
       validate: { isUrl: true },
+      allowNull: true,
     },
     c_url: {
       type: DataTypes.STRING,
